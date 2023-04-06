@@ -1,9 +1,12 @@
 import React from "react";
+import Header from "./components/Header/Header";
+import Navbar from "./components/Header/Navbar";
 
 function App() {
   return (
     <div className="App">
-      <h1>Home Page</h1>
+      <Header />
+      <Navbar />
     </div>
   );
 }
