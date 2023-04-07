@@ -10,7 +10,7 @@ function Header() {
 		<Wrapper>
 			<div className="header-menu">
 				<div className="header-menu_left">
-					<img src={ logo } alt="Давай Сходим!" className="header-menu-logo" />
+					<img src={ logo } alt="Давай Сходим!" className="header-menu-logo button" />
           <ul class="header-menu-list" data-id="select-city">
             <li class="header-menu-item selected">
 							<div className="header-menu-icon">
@@ -43,7 +43,7 @@ function Header() {
 				</div>
 
 				<div className="header-menu_right">
-					<img src={ user } alt="user icon" className="header-menu-user" />
+					<img src={ user } alt="user icon" className="header-menu-user button" />
 				</div>
 			</div>
 		</Wrapper>
@@ -77,10 +77,10 @@ const Wrapper = styled.header`
     align-items: center;
 		border-radius: .25em;
     color: rgba(0, 0, 0, 0.865);
-		background: var(--clr-grey);
-    cursor: pointer;
+		background: var(--clr-grey1);
 		margin-left: 1em;
 		padding: .5em .25em;
+    cursor: pointer;
 	}
 
 	.header-menu-item {
