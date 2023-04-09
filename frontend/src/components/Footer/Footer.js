@@ -4,12 +4,13 @@ import logo from "../../resources/logo.png";
 import vk from "../../resources/vk.png";
 import instagram from "../../resources/instagram.png";
 import telegram from "../../resources/telegram.png";
-import usfacebook from "../../resources/facebook.png";
+import facebook from "../../resources/facebook.png";
+import message from "../../resources/message.png";
 
 function Footer() {
 	return (
 		<Wrapper>
-			<div className="footer-top">
+			<div className="footer-content">
 				<div className="footer-logo">
 					<img src={ logo } alt="Давай Сходим!" />
 				</div>
@@ -24,17 +25,19 @@ function Footer() {
 						<img src={ telegram } alt="telegram icon" />
 					</a>
 					<a href="https://www.facebook.com/sxodim" className="footer-social_network-item">
-						<img src={ usfacebook } alt="usfacebook icon" />
+						<img src={ facebook } alt="usfacebook icon" />
 					</a>
 				</div>
 				<div className="footer-email_subscribe">
 					<h4 className="footer-email_subscribe-title title">Рассылка</h4>
 					<p class="footer-email_subscribe-text">Отбираем главные события недели, а&nbsp;потом интересно рассказываем о них в нашей рассылке.</p>
 					<form class="footer-email_subscribe-form" id="subscribe_form">
-            <label for="email-input">
-              <div class="impression-icon "></div>
-						</label>
-						<input type="text" id="email-input" name="email" placeholder="Электронная почта" className="footer-email_subscribe-form-input" />
+						<div className="footer-email_subscribe-form-input">
+            	<label for="email-input" class="footer-email_subscribe-form-input-icon">
+								<img src={ message } alt="message icon" />
+							</label>
+							<input type="text" id="email-input" name="email" placeholder="Электронная почта" className="footer-email_subscribe-form-input-text" />
+						</div>
             <button class="footer-email_subscribe-form-button" type="submit">Подписаться</button>
           </form>
 				</div>
@@ -53,7 +56,7 @@ function Footer() {
 
 			<div className="header-bottom">
 				<p className="header-privacy_text">
-					 &copy; Давай Сходим,
+					 &copy; Давай Сходим, 2023
 					<span id="copyright">
 							<script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
 					</span>
@@ -75,7 +78,7 @@ const Wrapper = styled.footer`
 		color: rgba(0, 0, 0, 0.48);
 	}
 	
-	.footer-top {
+	.footer-content {
 		display: grid;
 		column-gap: 2em;
 		grid-template-areas:
@@ -90,11 +93,12 @@ const Wrapper = styled.footer`
 	}
 
 	.footer-logo {
+		height: 89px;
 		grid-area: logo;
 	}
 
 	.footer-logo img {
-		height: 3em;
+		height: 4em;
 	}
 	
 	.footer-social_networks {
@@ -103,6 +107,7 @@ const Wrapper = styled.footer`
     justify-content: flex-start;
 		grid-area: social-networks;
     grid-column-gap: 8px;
+		height: 50px;
 	}
 
 	.footer-social_network-item {
@@ -146,31 +151,55 @@ const Wrapper = styled.footer`
 	}
 	
 	.footer-email_subscribe-form-input {
-		height: 3.4375em;
+		display: flex;
+		align-items: center;
+		background: var(--clr-white);
+    border: 1px solid var(--clr-grey2);
+    border-radius: 4px;
+    padding: 0 12px;
+	}
+	
+	.footer-email_subscribe-form-input-icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 24px;
+		height: 24px;
+	}
+	
+	.footer-email_subscribe-form-input-icon img {
+		width: 88%;
 	}
 
-	.footer-email_subscribe-form-input {
+	.footer-email_subscribe-form-input-text {
 		width: 100%;
+		height: 55px;
 		border: none;
     font-size: 14px;
     line-height: 16px;
-    // margin-left: .4375em;
-    padding: .75em 0;
+    margin-left: 7px;
+		padding: 12px 0;
+	}
+
+	.footer-email_subscribe-form-input-text:focus{
+    outline: none;
 	}
 
 	.footer-email_subscribe-form-button {
 		width: 100%;
+		height: 44px;
     background: var(--clr-orange);
     color: var(--clr-white);
 		border: none;
     border-radius: 4px;
-		margin-top: .5em;
-		padding: .625em .75em;
+		margin-top: 8px;
+		padding: 10px 12px;
 	}
 	
 	.footer-about_project {
 		grid-area: about-project;
 		width: 290.5px;
+		height: 142px;
 		padding-bottom: 1em;
 	}
 	
@@ -189,6 +218,11 @@ const Wrapper = styled.footer`
 	
 	.footer-about_project-links * {
 		width: 50%;
+		transition: var(--transition);
+	}
+	
+	.footer-about_project-links *:hover {
+    color: var(--clr-orange);
 	}
 	
 	.footer-agreements {
@@ -196,9 +230,18 @@ const Wrapper = styled.footer`
 		display: flex;
     flex-wrap: wrap;
     gap: 16px;
-    line-height: 20px;
-    font-size: 14px;
-    margin-top: 1em;
+		height: 41px;
+    margin-top: 16px;
+	}
+	
+	.footer-agreements * {
+		line-height: 20px;
+		font-size: 14px;
+		transition: var(--transition);
+	}
+	
+	.footer-agreements *:hover {
+    color: var(--clr-orange);
 	}
 
 	.header-bottom {

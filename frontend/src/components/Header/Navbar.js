@@ -26,31 +26,31 @@ function Navbar() {
 					<div className="nav-menu-icon">
 						<img src={ certificates } alt="search button" className="horizontal_icon" />
 					</div>
-					<span>Сертификаты</span>
+					<span className="nav-menu-text">Сертификаты</span>
 				</li>
 				<li className="nav-menu-item">
 					<div className="nav-menu-icon">
 						<img src={ tickets } alt="search button" className="horizontal_icon" />
 					</div>
-					<span>Билеты</span>
+					<span className="nav-menu-text">Билеты</span>
 				</li>
 				<li className="nav-menu-item">
 					<div className="nav-menu-icon">
 						<img src={ magazine } alt="search button" className="horizontal_icon" />
 					</div>
-					<span>Журнал</span>
+					<span className="nav-menu-text">Журнал</span>
 				</li>
 				<li className="nav-menu-item">
 					<div className="nav-menu-icon">
 						<img src={ poster } alt="search button" className="vertical_icon" />
 					</div>
-					<span>Афиша</span>
+					<span className="nav-menu-text">Афиша</span>
 				</li>
 				<li className="nav-menu-item">
 					<div className="nav-menu-icon">
 						<img src={ places } alt="search button" className="vertical_icon" />
 					</div>
-					<span>Места</span>
+					<span className="nav-menu-text">Места</span>
 				</li>
 			</ul>
 		</Wrapper>
@@ -132,6 +132,16 @@ const Wrapper = styled.nav`
 		cursor: pointer;
 	}
 
+	.nav-menu-text {
+    line-height: 20px;
+		font-size: 14px;
+		transition: var(--transition);
+	}
+	
+	.nav-menu-item:hover .nav-menu-text {
+    color: var(--clr-orange);
+	}
+	
 	.nav-menu-icon {
 		margin: 0 .375em 0 .125em;
 	}
