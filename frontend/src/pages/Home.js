@@ -1,8 +1,9 @@
 import React from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 import Promotion from "./components/Promotion.js";
 import SpecialDates from "./components/SpecialDates.js";
-import Impression from "./components/Impression.js";
+import Impression from "./components/ImpressionBest.js";
+import PageContent from "./components/PageContent.js";
 
 function Home() {
 	return (
@@ -10,6 +11,7 @@ function Home() {
 			<Promotion />
 			<SpecialDates />
 			<Impression />
+			<PageContent />
 		</Wrapper>
 	);
 }

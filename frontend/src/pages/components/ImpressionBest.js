@@ -9,7 +9,7 @@ import afisha from "../../resources/afisha_white.png";
 import journal from "../../resources/journal_white.png";
 import swiper from "../../resources/swiper_button.png";
 
-function Impression() {
+function ImpressionBest() {
 	return (
 		<Wrapper>
 			<div className="swiper-container">
@@ -270,4 +270,4 @@ const Wrapper = styled.div`
 	}
 `;
 
-export default Impression;
+export default ImpressionBest;

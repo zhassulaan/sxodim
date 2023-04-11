@@ -1,5 +1,5 @@
 import React from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 import search from "../../resources/search.png";
 import close from "../../resources/close.png";
 import cert from "../../resources/cert.png";

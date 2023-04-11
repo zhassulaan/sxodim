@@ -1,5 +1,5 @@
 import React from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 import logo from "../resources/logo.png";
 import vk from "../resources/vk.png";
 import instagram from "../resources/instagram.png";

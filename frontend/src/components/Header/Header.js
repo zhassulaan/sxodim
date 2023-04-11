@@ -1,5 +1,5 @@
 import React from "react";
-import styled from 'styled-components';
+import styled from "styled-components";
 import logo from "../../resources/logo.png";
 import location from "../../resources/location.png";
 import arrow from "../../resources/arrow.png";
