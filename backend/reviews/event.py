@@ -1,0 +1,20 @@
+event = [
+    {
+        'title': 'Выставка «Ван Гог. Ожившие полотна»',
+        'description': '',
+        'date': '',
+        'time': '',
+        'address': '',
+        'image': '',
+        'phone': '',
+        'website': '',
+        'views': '',
+        'hashtags': '',
+        'comments': '',
+        'publication_date': '',
+        'favourites': '',
+    },
+    {},
+    {},
+    {},
+]

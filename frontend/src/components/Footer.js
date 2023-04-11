@@ -110,15 +110,6 @@ const Wrapper = styled.footer`
 		height: 50px;
 	}
 
-	.footer-social_network-item {
-		width: 2em;
-		height: 2em;
-	}
-	
-	.footer-social_network-item img {
-		width: inherit;
-	}
-
 	.footer-email_subscribe {
 		display: flex;
     flex-wrap: wrap;
@@ -167,10 +158,6 @@ const Wrapper = styled.footer`
 		height: 24px;
 	}
 	
-	.footer-email_subscribe-form-input-icon img {
-		width: 88%;
-	}
-
 	.footer-email_subscribe-form-input-text {
 		width: 100%;
 		height: 55px;
