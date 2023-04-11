@@ -1,11 +1,11 @@
 import React from "react";
 import styled from 'styled-components';
-import logo from "../../resources/logo.png";
-import vk from "../../resources/vk.png";
-import instagram from "../../resources/instagram.png";
-import telegram from "../../resources/telegram.png";
-import facebook from "../../resources/facebook.png";
-import message from "../../resources/message.png";
+import logo from "../resources/logo.png";
+import vk from "../resources/vk.png";
+import instagram from "../resources/instagram.png";
+import telegram from "../resources/telegram.png";
+import facebook from "../resources/facebook.png";
+import message from "../resources/message.png";
 
 function Footer() {
 	return (

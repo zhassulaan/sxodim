@@ -2,10 +2,10 @@ import React from "react";
 import styled from 'styled-components';
 import search from "../../resources/search.png";
 import close from "../../resources/close.png";
-import certificates from "../../resources/certificates.png";
-import tickets from "../../resources/tickets.png";
-import magazine from "../../resources/magazine.png";
-import poster from "../../resources/poster.png";
+import cert from "../../resources/cert.png";
+import tickets from "../../resources/tickets_black.png";
+import journal from "../../resources/journal.png";
+import afisha from "../../resources/afisha_black.png";
 import places from "../../resources/places.png";
 
 function Navbar() {
@@ -24,31 +24,31 @@ function Navbar() {
 			<ul className="nav-menu">
 				<li className="nav-menu-item">
 					<div className="nav-menu-icon">
-						<img src={ certificates } alt="search button" className="horizontal_icon" />
+						<img src={ cert } alt="cert icon" className="horizontal_icon" />
 					</div>
 					<span className="nav-menu-text">Сертификаты</span>
 				</li>
 				<li className="nav-menu-item">
 					<div className="nav-menu-icon">
-						<img src={ tickets } alt="search button" className="horizontal_icon" />
+						<img src={ tickets } alt="tickets icon" className="horizontal_icon" />
 					</div>
 					<span className="nav-menu-text">Билеты</span>
 				</li>
 				<li className="nav-menu-item">
 					<div className="nav-menu-icon">
-						<img src={ magazine } alt="search button" className="horizontal_icon" />
+						<img src={ journal } alt="journal icon" className="horizontal_icon" />
 					</div>
 					<span className="nav-menu-text">Журнал</span>
 				</li>
 				<li className="nav-menu-item">
 					<div className="nav-menu-icon">
-						<img src={ poster } alt="search button" className="vertical_icon" />
+						<img src={ afisha } alt="afisha icon" className="vertical_icon" />
 					</div>
 					<span className="nav-menu-text">Афиша</span>
 				</li>
 				<li className="nav-menu-item">
 					<div className="nav-menu-icon">
-						<img src={ places } alt="search button" className="vertical_icon" />
+						<img src={ places } alt="places icon" className="vertical_icon" />
 					</div>
 					<span className="nav-menu-text">Места</span>
 				</li>
