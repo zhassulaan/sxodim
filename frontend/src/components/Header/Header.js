@@ -102,19 +102,9 @@ const Wrapper = styled.header`
 		margin-right: 4px;
 	}
 
-	.header-menu-icon img {
-		width: 16px;
-		height: 20px;
-	}
-
 	.header-menu-arrow {
 		width: 16px;
 		height: 16px;
-	}
-
-	.header-menu-arrow img {
-		width: 6.67px;
-		height: 3.33px;
 	}
 
 	.header-menu-user {

@@ -1,428 +1,430 @@
 import React from "react";
 import styled from 'styled-components';
+import location from "../../resources/location.png";
+import arrow from "../../resources/arrow.png";
+import search from "../../resources/search.png";
+import close from "../../resources/close.png";
 
 function Impresions() {
 	return (
 		<Wrapper>
+			<div className="impression-filters">
+				<div class="impression-filters-top">
+					<h1 class="page-title">Давай Сходим
+						<ul class="impression-city-list select-city" data-id="select-city">
+							<li class="impression-city selected">
+								<div className="impression-icon">
+									<img src={ location } alt="location icon" />
+								</div>
+								<span>Алматы</span>
+								<div className="impression-arrow">
+									<img src={ arrow } alt="open arrow" />
+								</div>
+							</li>
+						</ul>
+					</h1>
+					<div className="impression-searchbar">
+						<div className="impression-icon searchbar-icon">
+							<img src={ search } alt="search button" className="button" />
+						</div>
+						<input type="search" placeholder="Поиск впечатлений" data-type="search" id="search-impression-input" data-filter="" />
+						{/* <div className="impression-icon searchbar-button">
+							<img src={ close } alt="close button" className="button" />
+						</div> */}
+					</div>
+				</div>
+				<div className="impression-calendar swiper-container">
+					<div class="swiper-slide">
+						<div class="calendar">
+							<div class="calendar-month">
+								<div class="calendar-month-title">Апрель</div>
+								<div class="calendar-days">
+                  <div class="calendar-day" data-value="2023-04-11">
+                    <div class="calendar-day-title">Вт</div>
+                    <div class="calendar-day-value">11</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-04-12">
+                    <div class="calendar-day-title">Ср</div>
+                    <div class="calendar-day-value">12</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-04-13">
+                    <div class="calendar-day-title">Чт</div>
+                    <div class="calendar-day-value">13</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-04-14">
+                    <div class="calendar-day-title">Пт</div>
+                    <div class="calendar-day-value">14</div>
+                  </div>
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-04-15">
+                    <div class="calendar-day-title">Сб</div>
+                    <div class="calendar-day-value">15</div>
+                  </div>
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-04-16">
+                    <div class="calendar-day-title">Вс</div>
+                    <div class="calendar-day-value">16</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-04-17">
+                    <div class="calendar-day-title">Пн</div>
+                    <div class="calendar-day-value">17</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-04-18">
+                    <div class="calendar-day-title">Вт</div>
+                    <div class="calendar-day-value">18</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-04-19">
+                    <div class="calendar-day-title">Ср</div>
+                    <div class="calendar-day-value">19</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-04-20">
+                    <div class="calendar-day-title">Чт</div>
+                    <div class="calendar-day-value">20</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-04-21">
+                    <div class="calendar-day-title">Пт</div>
+                    <div class="calendar-day-value">21</div>
+                  </div>
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-04-22">
+                    <div class="calendar-day-title">Сб</div>
+                    <div class="calendar-day-value">22</div>
+                  </div>
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-04-23">
+                    <div class="calendar-day-title">Вс</div>
+                    <div class="calendar-day-value">23</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-04-24">
+                    <div class="calendar-day-title">Пн</div>
+                    <div class="calendar-day-value">24</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-04-25">
+                    <div class="calendar-day-title">Вт</div>
+                    <div class="calendar-day-value">25</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-04-26">
+                    <div class="calendar-day-title">Ср</div>
+                    <div class="calendar-day-value">26</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-04-27">
+                    <div class="calendar-day-title">Чт</div>
+                    <div class="calendar-day-value">27</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-04-28">
+                    <div class="calendar-day-title">Пт</div>
+                    <div class="calendar-day-value">28</div>
+                  </div>
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-04-29">
+                    <div class="calendar-day-title">Сб</div>
+                    <div class="calendar-day-value">29</div>
+                  </div>
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-04-30">
+                    <div class="calendar-day-title">Вс</div>
+                    <div class="calendar-day-value">30</div>
+                  </div>
+                </div>
+							</div>
+							<div class="calendar-month">
+            		<div class="calendar-month-title">Май</div>
+								<div class="calendar-days">
+									<div class="calendar-day" data-value="2023-05-01">
+										<div class="calendar-day-title">Пн</div>
+										<div class="calendar-day-value">1</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-02">
+										<div class="calendar-day-title">Вт</div>
+										<div class="calendar-day-value">2</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-03">
+										<div class="calendar-day-title">Ср</div>
+										<div class="calendar-day-value">3</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-04">
+										<div class="calendar-day-title">Чт</div>
+										<div class="calendar-day-value">4</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-05">
+										<div class="calendar-day-title">Пт</div>
+										<div class="calendar-day-value">5</div>
+									</div>
+									<div class="calendar-day calendar-day-weekend" data-value="2023-05-06">
+										<div class="calendar-day-title">Сб</div>
+										<div class="calendar-day-value">6</div>
+									</div>
+									<div class="calendar-day calendar-day-weekend" data-value="2023-05-07">
+										<div class="calendar-day-title">Вс</div>
+										<div class="calendar-day-value">7</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-08">
+										<div class="calendar-day-title">Пн</div>
+										<div class="calendar-day-value">8</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-09">
+										<div class="calendar-day-title">Вт</div>
+										<div class="calendar-day-value">9</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-10">
+										<div class="calendar-day-title">Ср</div>
+										<div class="calendar-day-value">10</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-11">
+										<div class="calendar-day-title">Чт</div>
+										<div class="calendar-day-value">11</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-12">
+										<div class="calendar-day-title">Пт</div>
+										<div class="calendar-day-value">12</div>
+									</div>
+									<div class="calendar-day calendar-day-weekend" data-value="2023-05-13">
+										<div class="calendar-day-title">Сб</div>
+										<div class="calendar-day-value">13</div>
+									</div>
+									<div class="calendar-day calendar-day-weekend" data-value="2023-05-14">
+										<div class="calendar-day-title">Вс</div>
+										<div class="calendar-day-value">14</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-15">
+										<div class="calendar-day-title">Пн</div>
+										<div class="calendar-day-value">15</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-16">
+										<div class="calendar-day-title">Вт</div>
+										<div class="calendar-day-value">16</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-17">
+										<div class="calendar-day-title">Ср</div>
+										<div class="calendar-day-value">17</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-18">
+										<div class="calendar-day-title">Чт</div>
+										<div class="calendar-day-value">18</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-19">
+										<div class="calendar-day-title">Пт</div>
+										<div class="calendar-day-value">19</div>
+									</div>
+									<div class="calendar-day calendar-day-weekend" data-value="2023-05-20">
+										<div class="calendar-day-title">Сб</div>
+										<div class="calendar-day-value">20</div>
+									</div>
+									<div class="calendar-day calendar-day-weekend" data-value="2023-05-21">
+										<div class="calendar-day-title">Вс</div>
+										<div class="calendar-day-value">21</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-22">
+										<div class="calendar-day-title">Пн</div>
+										<div class="calendar-day-value">22</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-23">
+										<div class="calendar-day-title">Вт</div>
+										<div class="calendar-day-value">23</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-24">
+										<div class="calendar-day-title">Ср</div>
+										<div class="calendar-day-value">24</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-25">
+										<div class="calendar-day-title">Чт</div>
+										<div class="calendar-day-value">25</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-26">
+										<div class="calendar-day-title">Пт</div>
+										<div class="calendar-day-value">26</div>
+									</div>
+									<div class="calendar-day calendar-day-weekend" data-value="2023-05-27">
+										<div class="calendar-day-title">Сб</div>
+										<div class="calendar-day-value">27</div>
+									</div>
+									<div class="calendar-day calendar-day-weekend" data-value="2023-05-28">
+										<div class="calendar-day-title">Вс</div>
+										<div class="calendar-day-value">28</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-29">
+										<div class="calendar-day-title">Пн</div>
+										<div class="calendar-day-value">29</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-30">
+										<div class="calendar-day-title">Вт</div>
+										<div class="calendar-day-value">30</div>
+									</div>
+									<div class="calendar-day" data-value="2023-05-31">
+										<div class="calendar-day-title">Ср</div>
+										<div class="calendar-day-value">31</div>
+									</div>
+								</div>
+        			</div>
+        			<div class="calendar-month">
+								<div class="calendar-month-title">Июнь</div>
+								<div class="calendar-days">
+                  <div class="calendar-day" data-value="2023-06-01">
+                    <div class="calendar-day-title">Чт</div>
+                    <div class="calendar-day-value">1</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-02">
+                    <div class="calendar-day-title">Пт</div>
+                    <div class="calendar-day-value">2</div>
+                  </div>
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-06-03">
+                    <div class="calendar-day-title">Сб</div>
+                    <div class="calendar-day-value">3</div>
+                  </div>
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-06-04">
+                    <div class="calendar-day-title">Вс</div>
+                    <div class="calendar-day-value">4</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-05">
+                    <div class="calendar-day-title">Пн</div>
+                    <div class="calendar-day-value">5</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-06">
+                    <div class="calendar-day-title">Вт</div>
+                    <div class="calendar-day-value">6</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-07">
+                    <div class="calendar-day-title">Ср</div>
+                    <div class="calendar-day-value">7</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-08">
+                    <div class="calendar-day-title">Чт</div>
+                    <div class="calendar-day-value">8</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-09">
+                    <div class="calendar-day-title">Пт</div>
+                    <div class="calendar-day-value">9</div>
+                  </div>
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-06-10">
+                    <div class="calendar-day-title">Сб</div>
+                    <div class="calendar-day-value">10</div>
+                  </div>
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-06-11">
+                    <div class="calendar-day-title">Вс</div>
+                    <div class="calendar-day-value">11</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-12">
+                    <div class="calendar-day-title">Пн</div>
+                    <div class="calendar-day-value">12</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-13">
+                    <div class="calendar-day-title">Вт</div>
+                    <div class="calendar-day-value">13</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-14">
+                    <div class="calendar-day-title">Ср</div>
+                    <div class="calendar-day-value">14</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-15">
+                    <div class="calendar-day-title">Чт</div>
+                    <div class="calendar-day-value">15</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-16">
+                    <div class="calendar-day-title">Пт</div>
+                    <div class="calendar-day-value">16</div>
+                  </div>
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-06-17">
+                    <div class="calendar-day-title">Сб</div>
+                    <div class="calendar-day-value">17</div>
+                  </div>
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-06-18">
+                    <div class="calendar-day-title">Вс</div>
+                    <div class="calendar-day-value">18</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-19">
+                    <div class="calendar-day-title">Пн</div>
+                    <div class="calendar-day-value">19</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-20">
+                    <div class="calendar-day-title">Вт</div>
+                    <div class="calendar-day-value">20</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-21">
+                    <div class="calendar-day-title">Ср</div>
+                    <div class="calendar-day-value">21</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-22">
+                    <div class="calendar-day-title">Чт</div>
+                    <div class="calendar-day-value">22</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-23">
+                    <div class="calendar-day-title">Пт</div>
+                    <div class="calendar-day-value">23</div>
+                  </div>
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-06-24">
+                    <div class="calendar-day-title">Сб</div>
+                    <div class="calendar-day-value">24</div>
+                  </div>
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-06-25">
+                    <div class="calendar-day-title">Вс</div>
+                    <div class="calendar-day-value">25</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-26">
+                    <div class="calendar-day-title">Пн</div>
+                    <div class="calendar-day-value">26</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-27">
+                    <div class="calendar-day-title">Вт</div>
+                    <div class="calendar-day-value">27</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-28">
+                    <div class="calendar-day-title">Ср</div>
+                    <div class="calendar-day-value">28</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-29">
+                    <div class="calendar-day-title">Чт</div>
+                    <div class="calendar-day-value">29</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-06-30">
+                    <div class="calendar-day-title">Пт</div>
+                    <div class="calendar-day-value">30</div>
+                  </div>
+                </div>
+        			</div>
+							<div class="calendar-month">
+								<div class="calendar-month-title">Июль</div>
+								<div class="calendar-days">
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-07-01">
+                    <div class="calendar-day-title">Сб</div>
+                    <div class="calendar-day-value">1</div>
+                  </div>
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-07-02">
+                    <div class="calendar-day-title">Вс</div>
+                    <div class="calendar-day-value">2</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-07-03">
+                    <div class="calendar-day-title">Пн</div>
+                    <div class="calendar-day-value">3</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-07-04">
+                    <div class="calendar-day-title">Вт</div>
+                    <div class="calendar-day-value">4</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-07-05">
+                    <div class="calendar-day-title">Ср</div>
+                    <div class="calendar-day-value">5</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-07-06">
+                    <div class="calendar-day-title">Чт</div>
+                    <div class="calendar-day-value">6</div>
+                  </div>
+                  <div class="calendar-day" data-value="2023-07-07">
+                    <div class="calendar-day-title">Пт</div>
+                    <div class="calendar-day-value">7</div>
+                  </div>
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-07-08">
+                    <div class="calendar-day-title">Сб</div>
+                    <div class="calendar-day-value">8</div>
+                  </div>
+                  <div class="calendar-day calendar-day-weekend" data-value="2023-07-09">
+                    <div class="calendar-day-title">Вс</div>
+                    <div class="calendar-day-value">9</div>
+                  </div>
+                </div>
+        			</div>
+						</div>
+					</div>
+				</div>
+			</div>
 			{/* <div class="impressions" data-module="mainpage-posts">
                 <div class="impression-filters" data-module="mainpage-filters">
-                    <div class="impression-filters-top">
-                        <h1 class="page-title">Давай Сходим
-                            <div class="chips select-city open-dialog" data-open="select-city">
-                                <div class="impression-icon impression-icon-left">
-    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-        <use xlink:href="#location"></use>
-    </svg>
-</div>
-                                <span>Алматы</span>
-                                <div class="impression-icon ">
-    <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
-        <use xlink:href="#arrow_drop_down"></use>
-    </svg>
-</div>
-                            </div>
-                        </h1>
-                        <div class="impression-input-search">
-                            <label for="search-impression-input">
-                                <div class="impression-icon ">
-    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
-        <use xlink:href="#search-icon"></use>
-    </svg>
-</div>
-                            </label>
-                            <input type="search" placeholder="Поиск впечатлений" data-type="search" id="search-impression-input" data-filter="">
-                        </div>
-                    </div>
                     <div data-type="dates" data-filter="">
                         <div class="impression-calendar swiper-container swiper-container-initialized swiper-container-horizontal swiper-container-free-mode swiper-container-android" data-module="impression-calendar date-filter" data-id="dates">
-    <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
-        <div class="swiper-slide swiper-slide-active">
-            <div class="calendar">
-            <div class="calendar-month">
-            <div class="calendar-month-title">Апрель</div>
-            <div class="calendar-days">
-                                    <div class="calendar-day " data-value="2023-04-11">
-                        <div class="calendar-day-title">Вт</div>
-                        <div class="calendar-day-value">11</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-04-12">
-                        <div class="calendar-day-title">Ср</div>
-                        <div class="calendar-day-value">12</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-04-13">
-                        <div class="calendar-day-title">Чт</div>
-                        <div class="calendar-day-value">13</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-04-14">
-                        <div class="calendar-day-title">Пт</div>
-                        <div class="calendar-day-value">14</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-04-15">
-                        <div class="calendar-day-title">Сб</div>
-                        <div class="calendar-day-value">15</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-04-16">
-                        <div class="calendar-day-title">Вс</div>
-                        <div class="calendar-day-value">16</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-04-17">
-                        <div class="calendar-day-title">Пн</div>
-                        <div class="calendar-day-value">17</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-04-18">
-                        <div class="calendar-day-title">Вт</div>
-                        <div class="calendar-day-value">18</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-04-19">
-                        <div class="calendar-day-title">Ср</div>
-                        <div class="calendar-day-value">19</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-04-20">
-                        <div class="calendar-day-title">Чт</div>
-                        <div class="calendar-day-value">20</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-04-21">
-                        <div class="calendar-day-title">Пт</div>
-                        <div class="calendar-day-value">21</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-04-22">
-                        <div class="calendar-day-title">Сб</div>
-                        <div class="calendar-day-value">22</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-04-23">
-                        <div class="calendar-day-title">Вс</div>
-                        <div class="calendar-day-value">23</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-04-24">
-                        <div class="calendar-day-title">Пн</div>
-                        <div class="calendar-day-value">24</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-04-25">
-                        <div class="calendar-day-title">Вт</div>
-                        <div class="calendar-day-value">25</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-04-26">
-                        <div class="calendar-day-title">Ср</div>
-                        <div class="calendar-day-value">26</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-04-27">
-                        <div class="calendar-day-title">Чт</div>
-                        <div class="calendar-day-value">27</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-04-28">
-                        <div class="calendar-day-title">Пт</div>
-                        <div class="calendar-day-value">28</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-04-29">
-                        <div class="calendar-day-title">Сб</div>
-                        <div class="calendar-day-value">29</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-04-30">
-                        <div class="calendar-day-title">Вс</div>
-                        <div class="calendar-day-value">30</div>
-                    </div>
-                            </div>
-        </div>
-            <div class="calendar-month">
-            <div class="calendar-month-title">Май</div>
-            <div class="calendar-days">
-                                    <div class="calendar-day " data-value="2023-05-01">
-                        <div class="calendar-day-title">Пн</div>
-                        <div class="calendar-day-value">1</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-02">
-                        <div class="calendar-day-title">Вт</div>
-                        <div class="calendar-day-value">2</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-03">
-                        <div class="calendar-day-title">Ср</div>
-                        <div class="calendar-day-value">3</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-04">
-                        <div class="calendar-day-title">Чт</div>
-                        <div class="calendar-day-value">4</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-05">
-                        <div class="calendar-day-title">Пт</div>
-                        <div class="calendar-day-value">5</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-05-06">
-                        <div class="calendar-day-title">Сб</div>
-                        <div class="calendar-day-value">6</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-05-07">
-                        <div class="calendar-day-title">Вс</div>
-                        <div class="calendar-day-value">7</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-08">
-                        <div class="calendar-day-title">Пн</div>
-                        <div class="calendar-day-value">8</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-09">
-                        <div class="calendar-day-title">Вт</div>
-                        <div class="calendar-day-value">9</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-10">
-                        <div class="calendar-day-title">Ср</div>
-                        <div class="calendar-day-value">10</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-11">
-                        <div class="calendar-day-title">Чт</div>
-                        <div class="calendar-day-value">11</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-12">
-                        <div class="calendar-day-title">Пт</div>
-                        <div class="calendar-day-value">12</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-05-13">
-                        <div class="calendar-day-title">Сб</div>
-                        <div class="calendar-day-value">13</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-05-14">
-                        <div class="calendar-day-title">Вс</div>
-                        <div class="calendar-day-value">14</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-15">
-                        <div class="calendar-day-title">Пн</div>
-                        <div class="calendar-day-value">15</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-16">
-                        <div class="calendar-day-title">Вт</div>
-                        <div class="calendar-day-value">16</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-17">
-                        <div class="calendar-day-title">Ср</div>
-                        <div class="calendar-day-value">17</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-18">
-                        <div class="calendar-day-title">Чт</div>
-                        <div class="calendar-day-value">18</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-19">
-                        <div class="calendar-day-title">Пт</div>
-                        <div class="calendar-day-value">19</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-05-20">
-                        <div class="calendar-day-title">Сб</div>
-                        <div class="calendar-day-value">20</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-05-21">
-                        <div class="calendar-day-title">Вс</div>
-                        <div class="calendar-day-value">21</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-22">
-                        <div class="calendar-day-title">Пн</div>
-                        <div class="calendar-day-value">22</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-23">
-                        <div class="calendar-day-title">Вт</div>
-                        <div class="calendar-day-value">23</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-24">
-                        <div class="calendar-day-title">Ср</div>
-                        <div class="calendar-day-value">24</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-25">
-                        <div class="calendar-day-title">Чт</div>
-                        <div class="calendar-day-value">25</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-26">
-                        <div class="calendar-day-title">Пт</div>
-                        <div class="calendar-day-value">26</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-05-27">
-                        <div class="calendar-day-title">Сб</div>
-                        <div class="calendar-day-value">27</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-05-28">
-                        <div class="calendar-day-title">Вс</div>
-                        <div class="calendar-day-value">28</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-29">
-                        <div class="calendar-day-title">Пн</div>
-                        <div class="calendar-day-value">29</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-30">
-                        <div class="calendar-day-title">Вт</div>
-                        <div class="calendar-day-value">30</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-05-31">
-                        <div class="calendar-day-title">Ср</div>
-                        <div class="calendar-day-value">31</div>
-                    </div>
-                            </div>
-        </div>
-            <div class="calendar-month">
-            <div class="calendar-month-title">Июнь</div>
-            <div class="calendar-days">
-                                    <div class="calendar-day " data-value="2023-06-01">
-                        <div class="calendar-day-title">Чт</div>
-                        <div class="calendar-day-value">1</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-02">
-                        <div class="calendar-day-title">Пт</div>
-                        <div class="calendar-day-value">2</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-06-03">
-                        <div class="calendar-day-title">Сб</div>
-                        <div class="calendar-day-value">3</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-06-04">
-                        <div class="calendar-day-title">Вс</div>
-                        <div class="calendar-day-value">4</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-05">
-                        <div class="calendar-day-title">Пн</div>
-                        <div class="calendar-day-value">5</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-06">
-                        <div class="calendar-day-title">Вт</div>
-                        <div class="calendar-day-value">6</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-07">
-                        <div class="calendar-day-title">Ср</div>
-                        <div class="calendar-day-value">7</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-08">
-                        <div class="calendar-day-title">Чт</div>
-                        <div class="calendar-day-value">8</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-09">
-                        <div class="calendar-day-title">Пт</div>
-                        <div class="calendar-day-value">9</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-06-10">
-                        <div class="calendar-day-title">Сб</div>
-                        <div class="calendar-day-value">10</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-06-11">
-                        <div class="calendar-day-title">Вс</div>
-                        <div class="calendar-day-value">11</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-12">
-                        <div class="calendar-day-title">Пн</div>
-                        <div class="calendar-day-value">12</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-13">
-                        <div class="calendar-day-title">Вт</div>
-                        <div class="calendar-day-value">13</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-14">
-                        <div class="calendar-day-title">Ср</div>
-                        <div class="calendar-day-value">14</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-15">
-                        <div class="calendar-day-title">Чт</div>
-                        <div class="calendar-day-value">15</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-16">
-                        <div class="calendar-day-title">Пт</div>
-                        <div class="calendar-day-value">16</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-06-17">
-                        <div class="calendar-day-title">Сб</div>
-                        <div class="calendar-day-value">17</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-06-18">
-                        <div class="calendar-day-title">Вс</div>
-                        <div class="calendar-day-value">18</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-19">
-                        <div class="calendar-day-title">Пн</div>
-                        <div class="calendar-day-value">19</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-20">
-                        <div class="calendar-day-title">Вт</div>
-                        <div class="calendar-day-value">20</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-21">
-                        <div class="calendar-day-title">Ср</div>
-                        <div class="calendar-day-value">21</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-22">
-                        <div class="calendar-day-title">Чт</div>
-                        <div class="calendar-day-value">22</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-23">
-                        <div class="calendar-day-title">Пт</div>
-                        <div class="calendar-day-value">23</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-06-24">
-                        <div class="calendar-day-title">Сб</div>
-                        <div class="calendar-day-value">24</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-06-25">
-                        <div class="calendar-day-title">Вс</div>
-                        <div class="calendar-day-value">25</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-26">
-                        <div class="calendar-day-title">Пн</div>
-                        <div class="calendar-day-value">26</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-27">
-                        <div class="calendar-day-title">Вт</div>
-                        <div class="calendar-day-value">27</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-28">
-                        <div class="calendar-day-title">Ср</div>
-                        <div class="calendar-day-value">28</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-29">
-                        <div class="calendar-day-title">Чт</div>
-                        <div class="calendar-day-value">29</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-06-30">
-                        <div class="calendar-day-title">Пт</div>
-                        <div class="calendar-day-value">30</div>
-                    </div>
-                            </div>
-        </div>
-            <div class="calendar-month">
-            <div class="calendar-month-title">Июль</div>
-            <div class="calendar-days">
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-07-01">
-                        <div class="calendar-day-title">Сб</div>
-                        <div class="calendar-day-value">1</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-07-02">
-                        <div class="calendar-day-title">Вс</div>
-                        <div class="calendar-day-value">2</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-07-03">
-                        <div class="calendar-day-title">Пн</div>
-                        <div class="calendar-day-value">3</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-07-04">
-                        <div class="calendar-day-title">Вт</div>
-                        <div class="calendar-day-value">4</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-07-05">
-                        <div class="calendar-day-title">Ср</div>
-                        <div class="calendar-day-value">5</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-07-06">
-                        <div class="calendar-day-title">Чт</div>
-                        <div class="calendar-day-value">6</div>
-                    </div>
-                                    <div class="calendar-day " data-value="2023-07-07">
-                        <div class="calendar-day-title">Пт</div>
-                        <div class="calendar-day-value">7</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-07-08">
-                        <div class="calendar-day-title">Сб</div>
-                        <div class="calendar-day-value">8</div>
-                    </div>
-                                    <div class="calendar-day calendar-day-weekend" data-value="2023-07-09">
-                        <div class="calendar-day-title">Вс</div>
-                        <div class="calendar-day-value">9</div>
-                    </div>
-                            </div>
-        </div>
-    </div>
-
-        </div>
-        
-    </div>
+    
 <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
                     </div>
                     <div class="impression-filters-categories swiper-container" data-module="custom-swiper" space-between="8" free-mode="1" mobile-only="1">
@@ -1197,7 +1199,150 @@ function Impresions() {
 }
 
 const Wrapper = styled.div`
-	margin-top: 16px;
+	.impression-filters {
+    position: relative;
+		max-width: 100%;
+    margin-top: 8px;
+    padding: 0 16px;
+	}
+
+	.impression-filters-top {
+		display: flex;
+	}
+
+	.page-title {
+    display: flex;
+    align-items: center;
+		width: 100%;
+		height: 40px;
+    font-size: 32px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.865);
+	}
+
+	.impression-city-list {
+		border-radius: 4px;
+		color: rgba(0, 0, 0, 0.865);
+		background: var(--clr-grey1);
+		margin-left: 16px;
+		padding: 8px 4px;
+		cursor: pointer;
+	}
+
+	.impression-city {
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+	}
+
+	.impression-icon,
+	.impression-arrow {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.impression-icon {
+		width: 24px;
+		height: 24px;
+		margin-right: 4px;
+	}
+	
+	.impression-arrow {
+		width: 16px;
+		height: 16px;
+	}
+	
+	.impression-searchbar {
+		display: flex;
+    align-items: center;
+		height: 100%;
+    border: 1px solid var(--clr-grey2);
+    border-radius: 4px;
+		background: var(--clr-white);
+		padding: 0 12px;
+	}
+	
+	.searchbar-icon {
+		margin-right: 0;
+	}
+
+	#search-impression-input {
+		width: 391px;
+		height: 40px;
+		border: none;
+		margin-left: 7px;
+		padding: 12px 0;
+	}
+
+	#search-impression-input:focus{
+    outline: none;
+	}
+
+	.swiper-container {
+		overflow: hidden;
+    z-index: 1;
+	}
+
+	.impression-calendar {
+		display: flex;
+    align-items: center;
+		margin-top: 24px;
+	}
+	
+	.calendar,
+	.calendar-days {
+		display: flex;
+	}
+	
+	.calendar-month-title {
+		line-height: 16px;
+		font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+    color: rgba(0, 0, 0, 0.865);
+    margin-bottom: 4px;
+	}
+
+	.calendar-day {
+		display: flex;
+		flex-wrap: wrap;
+		width: 40px;
+		height: 50px;
+		position: relative;
+		cursor: pointer;
+		padding: 4px 0;
+		justify-content: center;
+	}
+
+	.calendar-day-weekend .calendar-day-value {
+    color: var(--clr-orange-2);
+	}
+
+	.calendar-day-title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2px;
+    color: #a6a6a6;
+	}
+
+	.calendar-day-value {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+	}
 `;
 
 export default Impresions;

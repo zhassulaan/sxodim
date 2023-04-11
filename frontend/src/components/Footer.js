@@ -188,7 +188,7 @@ const Wrapper = styled.footer`
 	.footer-email_subscribe-form-button {
 		width: 100%;
 		height: 44px;
-    background: var(--clr-orange);
+    background: var(--clr-orange-1);
     color: var(--clr-white);
 		border: none;
     border-radius: 4px;
@@ -222,7 +222,7 @@ const Wrapper = styled.footer`
 	}
 	
 	.footer-about_project-links *:hover {
-    color: var(--clr-orange);
+    color: var(--clr-orange-1);
 	}
 	
 	.footer-agreements {
@@ -241,7 +241,7 @@ const Wrapper = styled.footer`
 	}
 	
 	.footer-agreements *:hover {
-    color: var(--clr-orange);
+    color: var(--clr-orange-1);
 	}
 
 	.header-bottom {
