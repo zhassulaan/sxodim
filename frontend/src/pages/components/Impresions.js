@@ -7,17 +7,17 @@ import search from "../../resources/search.png";
 import close from "../../resources/close.png";
 
 function Impresions() {
-    const [event, setEvent] = useState([]);
+    const [events, setEvents] = useState([]);
     useEffect(() => {
         async function fetchEvents() {
-            const { data } = await axios.get('http://127.0.0.1:8000/api/event/');
-            setEvent(data);
+            const { data } = await axios.get('/api/event/');
+            setEvents(data);
         }
         fetchEvents();
     }, []);
 	return (
 		<Wrapper>
-            { event.map(item =>
+            { events.map(item =>
                 <p>{ item.title }</p>
             ) }
 			<div className="impression-filters">
