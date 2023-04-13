@@ -11,8 +11,8 @@ function Header() {
 			<div className="header-menu">
 				<div className="header-menu_left">
 					<img src={ logo } alt="Давай Сходим!" className="header-menu-logo button" />
-          <ul class="header-menu-list" data-id="select-city">
-            <li class="header-menu-item selected">
+          <ul className="header-menu-list" data-id="select-city">
+            <li className="header-menu-item selected">
 							<div className="header-menu-icon">
 								<img src={ location } alt="location icon" />
 							</div>

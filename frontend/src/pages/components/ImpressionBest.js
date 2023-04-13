@@ -142,13 +142,13 @@ function ImpressionBest() {
 					</div>
 				</div>
 			</div>
-			<div class="swiper-button-prev swiper-button-disabled">
-        <div class="impression-icon">
+			<div className="swiper-button-prev swiper-button-disabled">
+        <div className="impression-icon">
 					<img src={ swiper } alt="arrow back" />
 				</div>
     	</div>
-			<div class="swiper-button-next">
-        <div class="impression-icon">
+			<div className="swiper-button-next">
+        <div className="impression-icon">
 					<img src={ swiper } alt="arrow next" />
 				</div>
     	</div>

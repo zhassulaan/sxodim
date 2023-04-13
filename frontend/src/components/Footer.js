@@ -30,25 +30,25 @@ function Footer() {
 				</div>
 				<div className="footer-email_subscribe">
 					<h4 className="footer-email_subscribe-title title">Рассылка</h4>
-					<p class="footer-email_subscribe-text">Отбираем главные события недели, а&nbsp;потом интересно рассказываем о них в нашей рассылке.</p>
-					<form class="footer-email_subscribe-form" id="subscribe_form">
+					<p className="footer-email_subscribe-text">Отбираем главные события недели, а&nbsp;потом интересно рассказываем о них в нашей рассылке.</p>
+					<form className="footer-email_subscribe-form" id="subscribe_form">
 						<div className="footer-email_subscribe-form-input">
-            	<label for="email-input" class="footer-email_subscribe-form-input-icon">
+            	<label htmlFor="email-input" className="footer-email_subscribe-form-input-icon">
 								<img src={ message } alt="message icon" />
 							</label>
 							<input type="text" id="email-input" name="email" placeholder="Электронная почта" className="footer-email_subscribe-form-input-text" />
 						</div>
-            <button class="footer-email_subscribe-form-button" type="submit">Подписаться</button>
+            <button className="footer-email_subscribe-form-button" type="submit">Подписаться</button>
           </form>
 				</div>
-        <div class="footer-about_project">
-          <h4 class="footer-about_project-title title">О «Давай Сходим»</h4>
-          <div class="footer-about_project-links">
+        <div className="footer-about_project">
+          <h4 className="footer-about_project-title title">О «Давай Сходим»</h4>
+          <div className="footer-about_project-links">
             <a href="https://sxodim.com/almaty/about" className="link">О Проекте</a>
             <a href="https://sxodim.com/almaty/contacts" className="link">Контакты</a>
           </div>
         </div> 
-				<div class="footer-agreements">
+				<div className="footer-agreements">
           <a href="https://sxodim.com/booking_rules" className="link">Правила использования и возврата</a>
           <a href="https://sxodim.com/polzovatelskoe-soglashenie" className="link">Пользовательское соглашение</a>
         </div> 
