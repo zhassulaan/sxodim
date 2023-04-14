@@ -10,8 +10,10 @@ Variables
   --clr-black: #000;
   --clr-grey1: #f2f2f2;
   --clr-grey2: #e5e5e5;
+  --clr-grey3: #a6a6a6;
   --clr-orange-1: #ec6652;
   --clr-orange-2: #bb483d;
+  --clr-orange-3: rgb(236, 102, 82);
   --transition: all .3s linear;
 }
 
