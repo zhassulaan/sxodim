@@ -1,13 +1,13 @@
 import React from "react";
 import styled from 'styled-components';
-import image1 from "../../resources/c7ccf83d7d93f5e1ac3d80a213d0220c_363x204-q-85.jpeg";
-import image2 from "../../resources/3ee652276022264531519d82b2390410_363x204-q-85.jpeg";
-import image3 from "../../resources/4c3f5118647031ae3ea1fe64cf1dfac8_363x204-q-85.jpeg";
-import image4 from "../../resources/8bac6ada3de5a159b397af9236b2a663_363x204-q-85.jpeg";
-import tickets from "../../resources/tickets_white.png";
-import afisha from "../../resources/afisha_white.png";
-import journal from "../../resources/journal_white.png";
-import swiper from "../../resources/swiper_button.png";
+import image1 from "../../../resources/c7ccf83d7d93f5e1ac3d80a213d0220c_363x204-q-85.jpeg";
+import image2 from "../../../resources/3ee652276022264531519d82b2390410_363x204-q-85.jpeg";
+import image3 from "../../../resources/4c3f5118647031ae3ea1fe64cf1dfac8_363x204-q-85.jpeg";
+import image4 from "../../../resources/8bac6ada3de5a159b397af9236b2a663_363x204-q-85.jpeg";
+import tickets from "../../../resources/tickets_white.png";
+import afisha from "../../../resources/afisha_white.png";
+import journal from "../../../resources/journal_white.png";
+import swiper from "../../../resources/swiper_button.png";
 
 function ImpressionBest() {
 	return (

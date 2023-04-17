@@ -1,9 +1,9 @@
 import React from "react";
 import styled from 'styled-components';
-import location from "../../resources/location.png";
-import arrow from "../../resources/arrow.png";
-import search from "../../resources/search.png";
-import close from "../../resources/close.png";
+import location from "../../../resources/location.png";
+import arrow from "../../../resources/arrow.png";
+import search from "../../../resources/search.png";
+import close from "../../../resources/close.png";
 
 function Filter() {
 	return (
