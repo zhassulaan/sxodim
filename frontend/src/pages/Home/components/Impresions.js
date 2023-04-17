@@ -4,6 +4,7 @@ import { listEvents } from "../../../actions/eventActions";
 import styled from 'styled-components';
 import ImpressionCard from "./ImpressionCard";
 import Loader from "../../../components/Loader";
+import Message from "../../../components/Message";
 
 function Impresions() {
 	const dispatch = useDispatch();
@@ -18,7 +19,7 @@ function Impresions() {
 	return (
 		<Wrapper>
 			{ loading ? <Loader />
-				: error ? <h3>{ error }</h3>
+				: error ? <Message variant="danger">{ error }</Message>
 					:
 					<div className="impression-items">
 						{ events?.map(item => 
