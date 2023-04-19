@@ -1,7 +1,7 @@
 events = [
     {
         'title': 'Выставка «Ван Гог. Ожившие полотна»',
-        '_id': 'vystavka-van-gog-ozhivshie-polotna',
+        'id': 'vystavka-van-gog-ozhivshie-polotna',
         'description': [
             '<p>Первый в Казахстане проекционный музей Lumiere-Hall открывает выставку «Ван Гог. Ожившие полотна».</p>',
             '<br/>',
@@ -35,7 +35,7 @@ events = [
         'phone': '',
         'website': [
             'https://lumierehall.kz',
-            'https://instagram.com/lum_kz?igsh_id=Zjc2ZTc4Nzk=',
+            'https://instagram.com/lum_kz?igshid=Zjc2ZTc4Nzk=',
         ],
         'views': 76309,
         'hashtags': [
@@ -101,7 +101,7 @@ events = [
     },
     {
         'title': 'Выставка «Климт и Шиле. Золото Модерна»',
-        '_id': 'vystavka-klimt-i-shile-zoloto-moderna',
+        'id': 'vystavka-klimt-i-shile-zoloto-moderna',
         'description': [
             '<p>Almaty Gallery совместно с Арт-Экспо предлагает погрузиться в творчество великих и загадочных австрийских художников, живших в сложную историческую эпоху на рубеже XIX-XX веков.</p>',
             '<br/>',
@@ -141,7 +141,7 @@ events = [
     },
     {
         'title': 'Выставка «От Мунка до Босха. Самые загадочные картины мира»',
-        '_id': 'vystavka-ot-munka-do-bosha-samye-zagadochnye-kartiny-mira',
+        'id': 'vystavka-ot-munka-do-bosha-samye-zagadochnye-kartiny-mira',
         'description': [
             '<p>Галерея VEKARTA приглашает на выставку «От Мунка до Босха. Самые загадочные картины мира», посвящённой великим мистическим полотнам, скрытый смысл которых пытались разгадать не одно поколение любителей живописи.</p>',
             '<br/>',

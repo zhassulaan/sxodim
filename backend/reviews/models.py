@@ -6,7 +6,7 @@ from phonenumber_field.modelfields import PhoneNumberField
 class Event(models.Model):
 	user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
 	title = models.CharField(max_length=200, null=True, blank=True)
-	_id = models.CharField(max_length=200, null=True, blank=True)
+	id = models.CharField(primary_key=True, max_length=200)
 	description = models.TextField(null=True, blank=True)
 	category = models.CharField(max_length=50, null=True, blank=True)
 	category_en = models.CharField(max_length=50, null=True, blank=True)
