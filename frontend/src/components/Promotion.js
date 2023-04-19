@@ -20,7 +20,7 @@ const Wrapper = styled.div`
 		height: auto; 
 		vertical-align: middle; 
 		max-width: 1000px;
-		margin: 16px;
+		margin: 16px 0;
 	}
 `;
 

@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Promotion from "./components/Promotion.js";
+import Promotion from "../../components/Promotion.js";
 import SpecialDates from "./components/SpecialDates.js";
 import Impression from "./components/ImpressionBest.js";
 import PageContent from "./components/PageContent.js";
 
-function Home() {
+function HomeScreen() {
 	return (
 		<Wrapper className="container">
 			<Promotion />
@@ -17,7 +17,8 @@ function Home() {
 }
 
 const Wrapper = styled.div`
+	max-width: 1152px;
 	padding-bottom: 50px;
 `;
 
-export default Home;
+export default HomeScreen;
