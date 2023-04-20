@@ -7,7 +7,7 @@ function ImpressionCard({ event }) {
 	return (
 		<Wrapper className="impression-card">
 			<div className="impression-card-image">
-				<a href={ `/event/${event._id}` }>
+				<a href={ `/event/${event.id}` }>
 					<img src={ event.image } alt="Фестиваль Sxodim Fest" className="impression-card-background_image"/>
 				</a>
 				<div className="impression-card-badges">
@@ -16,7 +16,7 @@ function ImpressionCard({ event }) {
 							<img src={ afisha } alt="afisha icon" />
 						</div>
 					</div>
-					<a href={ `/${event.category_en}/${event._id}/tickets` } className="impression-card-badge badge">
+					<a href={ `/${event.category_en}/${event.id}/tickets` } className="impression-card-badge badge">
 						<div className="impression-icon">
 							<img src={ tickets } alt="tickets icon" />
 						</div>
