@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { logout } from "../../actions/userActions";
 import Login from "../../modals/Login";
 import Register from "../../modals/Register";
@@ -27,34 +28,36 @@ function Header() {
 		<Wrapper>
 			<div className="header-menu">
 				<div className="header-menu_left">
-					<img src={ logo } alt="Давай Сходим!" className="header-menu-logo button" />
+					<Link to="/">
+						<img src={ logo } alt="Давай Сходим!" className="header-menu-logo button" />
+					</Link>
           <ul className="header-menu-list" data-id="select-city">
-            <li className="header-menu-item selected">
+            <li className="header-menu-item chip selected">
 							<div className="header-menu-icon">
 								<img src={ location } alt="location icon" />
 							</div>
-							<a href="https://sxodim.com/almaty">Алматы</a>
+							<Link to="https://sxodim.com/almaty">Алматы</Link>
 							<div className="header-menu-arrow">
 								<img src={ arrow } alt="open arrow" />
 							</div>
 						</li>
             {/* <li class="header-menu-item">
-							<a href="https://sxodim.com/astana">Астана</a>
+							<Link to="https://sxodim.com/astana">Астана</Link>
 						</li>
             <li class="header-menu-item">
-							<a href="https://sxodim.com/shymkent">Шымкент</a>
+							<Link to="https://sxodim.com/shymkent">Шымкент</Link>
 						</li>
             <li class="header-menu-item">
-							<a href="https://sxodim.com/bishkek">Бишкек</a>
+							<Link to="https://sxodim.com/bishkek">Бишкек</Link>
 						</li>
             <li class="header-menu-item">
-							<a href="https://sxodim.com/turkistan">Туркестан</a>
+							<Link to="https://sxodim.com/turkistan">Туркестан</Link>
 						</li>
             <li class="header-menu-item">
-							<a href="https://sxodim.com/karaganda">Караганда</a>
+							<Link to="https://sxodim.com/karaganda">Караганда</Link>
 						</li>
             <li class="header-menu-item">
-							<a href="https://sxodim.com/aktobe">Актобе</a>
+							<Link to="https://sxodim.com/aktobe">Актобе</Link>
 						</li> */}
           </ul>
 				</div>
@@ -64,8 +67,10 @@ function Header() {
 					{	open ?
 							userInfo ?
 								<ul className="header-menu-user_info">
-									<li className="header-menu-user_info-item">{ userInfo.username }</li>
-									<li className="header-menu-user_info-item"><span onClick={ logoutHandler }>Logout</span></li>
+									<li className="header-menu-user_info-title">{ userInfo.username }</li>
+									<li className="header-menu-user_info-item">Профиль</li>
+									<li className="header-menu-user_info-item">Редактироавть</li>
+									<li className="header-menu-user_info-item"><span onClick={ logoutHandler }>Выйти</span></li>
 								</ul>
 									:
 								<div>
@@ -105,21 +110,11 @@ const Wrapper = styled.header`
 		width: 4.570625em;
 	}
 
-	.header-menu-list {
-		display: flex;
-    align-items: center;
-		border-radius: .25em;
-    color: rgba(0, 0, 0, 0.865);
-		background: var(--clr-grey1);
-		margin-left: 1em;
-		padding: .5em .25em;
-    cursor: pointer;
-	}
-
 	.header-menu-item {
-		display: flex;
-		align-items: center;
 		font-size: 14px;
+		color: rgba(0, 0, 0, 0.865);
+		background: var(--clr-grey1);
+		padding: 8px 4px;
 	}
 
 	.header-menu-icon,
@@ -156,6 +151,12 @@ const Wrapper = styled.header`
 		z-index: 3;
 	}
 
+	.header-menu-user_info-title {
+		font-size: 14px;
+		border-bottom: 1px solid var(--clr-black);
+		margin-bottom: 1em;
+	}
+	
 	.header-menu-user_info-item {
 		font-size: 12px;
 		margin-bottom: .5em;
@@ -170,6 +171,7 @@ const Wrapper = styled.header`
 		height: 100%;
 		background: rgba(0, 0, 0, 0.5);
 		z-index: 3;
+		cursor: pointer;
 	}
 `;
 

@@ -461,17 +461,6 @@ const Wrapper = styled.div`
     color: rgba(0, 0, 0, 0.865);
 	}
 
-	.chip {
-		display: flex;
-		align-items: center;
-		line-height: 20px;
-		font-size: 14px;
-		color: rgba(0, 0, 0, 0.867);
-		background: rgb(242, 242, 242);
-		border-radius: 4px;
-		cursor: pointer;
-	}
-
 	.impression-city-list {
 		margin-left: 16px;
 	}
