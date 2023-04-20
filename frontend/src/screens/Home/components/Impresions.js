@@ -38,7 +38,7 @@ function Impresions() {
 
 	return (
 		<Wrapper>
-			{ loading ? <Loader width={ 100 } height={ 100 } />
+			{ loading ? <Loader />
 				: error ? <Message variant="danger">{ error }</Message>
 					:
 					<div className="impression-items">
