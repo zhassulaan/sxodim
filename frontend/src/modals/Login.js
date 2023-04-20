@@ -7,7 +7,7 @@ import { login } from "../actions/userActions";
 import Button from "../components/Button";
 import Message from "../components/Message";
 
-function Login() {
+function Login({ event }) {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
@@ -26,8 +26,7 @@ function Login() {
 		}
 	}, [history, userInfo, redirect]);
 
-	const submitHandler = (e) => {
-		// e.prevenDefault();
+	const submitHandler = () => {
 		dispatch(login(email, password));
 	}
 
@@ -37,7 +36,7 @@ function Login() {
 				<div className="form-header">
 					<h2 className="form-title">ВХОД</h2>
 
-					<span className="form-paragraph">
+					<span className="form-paragraph" onClick={ () => event('register') }>
 						<p>Регистрация</p>
 					</span>
 				</div>
@@ -47,7 +46,7 @@ function Login() {
 				<div onSubmit={ submitHandler }>
 					<div className="form-group">
 						<label htmlFor="email" className="form-group-label">Email</label>
-						<input 
+						<input
 							type="text"
 							name="email"
 							placeholder="Эл. почта"
@@ -59,7 +58,7 @@ function Login() {
 					</div>
 					<div className="form-group">
 						<label htmlFor="password" className="form-group-label">Пароль</label>
-						<input 
+						<input
 							type="password"
 							name="password"
 							placeholder="Пароль"
@@ -79,15 +78,15 @@ function Login() {
 
 const Wrapper = styled.div`
 	position: fixed;
-	left: 32.5%;
-	width: 35%;
+	left: 30%;
+	width: 40%;
 	z-index: 4;
 
 	.form-container {
     position: relative;
     background: var(--clr-white);
     margin: auto;
-    padding: 3.75rem 5rem 5.625rem;
+    padding: 3.75rem 5rem 4.375rem;
   }
 
 	.form-header {

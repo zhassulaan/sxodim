@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../actions/userActions";
 import Login from "../../modals/Login";
+import Register from "../../modals/Register";
 import logo from "../../resources/logo.png";
 import location from "../../resources/location.png";
 import arrow from "../../resources/arrow.png";
@@ -10,6 +11,7 @@ import user from "../../resources/user.png";
 
 function Header() {
 	const [open, setOpen] = useState(false);
+	const [type, setType] = useState('login');
 
 	const dispatch = useDispatch();
 
@@ -67,7 +69,8 @@ function Header() {
 								</ul>
 									:
 								<div>
-									<Login />
+									{ type === 'login' ? <Login event={ setType } /> : null}
+									{ type === 'register' ? <Register event={ setType } /> : null}
 									<div className="dark" onClick={ (e) => setOpen(false) }></div>
 								</div>
 								:

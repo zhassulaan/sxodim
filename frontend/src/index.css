@@ -47,7 +47,7 @@ a {
   transition: background-color 0.3s 0s ease-out, box-shadow 0.3s 0s ease-out, border-color 0.3s 0s ease-out, color 0.3s 0s ease-out, opacity 0.3s 0s ease-out, transform 0.3s 0s ease-out;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
 }
