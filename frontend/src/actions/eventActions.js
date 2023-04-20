@@ -21,8 +21,8 @@ export const listEvents = () => async (dispatch) => {
 	} catch (error) {
 		dispatch({
 			type: EVENT_LIST_FAIL,
-			payload: error.response && error.response.data.message
-			 ? error.response.data.message
+			payload: error.response && error.response.data.detail
+			 ? error.response.data.detail
 			 : error.message,
 		});
 	}
@@ -38,11 +38,12 @@ export const listEventDetails = (_id) => async (dispatch) => {
 			type: EVENT_DETAILS_SUCCESS,
 			payload: data,
 		});
+		
 	} catch (error) {
 		dispatch({
 			type: EVENT_DETAILS_FAIL,
-			payload: error.response && error.response.data.message
-			 ? error.response.data.message
+			payload: error.response && error.response.data.detail
+			 ? error.response.data.detail
 			 : error.message,
 		});
 	}

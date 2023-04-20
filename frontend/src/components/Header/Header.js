@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../actions/userActions";
+import Login from "../../modals/Login";
 import logo from "../../resources/logo.png";
 import location from "../../resources/location.png";
 import arrow from "../../resources/arrow.png";
 import user from "../../resources/user.png";
 
 function Header() {
+	const [open, setOpen] = useState(false);
+
+	const dispatch = useDispatch();
+
+	const userLogin = useSelector(state => state.userLogin);
+	const { userInfo } = userLogin;
+
+	const logoutHandler = () => {
+		dispatch(logout());
+		setOpen(false);
+	}
+
 	return (
 		<Wrapper>
 			<div className="header-menu">
@@ -43,9 +58,24 @@ function Header() {
 				</div>
 
 				<div className="header-menu_right">
-					<img src={ user } alt="user icon" className="header-menu-user button" />
+					<img src={ user } alt="user icon" className="header-menu-user button" onClick={ (e) => setOpen(!open) } />
+					{	open ?
+							userInfo ?
+								<ul className="header-menu-user_info">
+									<li className="header-menu-user_info-item">{ userInfo.username }</li>
+									<li className="header-menu-user_info-item"><span onClick={ logoutHandler }>Logout</span></li>
+								</ul>
+									:
+								<div>
+									<Login />
+									<div className="dark" onClick={ (e) => setOpen(false) }></div>
+								</div>
+								:
+							null
+					}
 				</div>
 			</div>
+			
 		</Wrapper>
 	);
 }
@@ -110,6 +140,33 @@ const Wrapper = styled.header`
 	.header-menu-user {
 		width: 1.25em;
 		padding: .625em 0;
+	}
+
+	.header-menu-user_info {
+		position: absolute;
+		right: 1em;
+		background: var(--clr-white);
+		border: 1px solid var(--clr-grey3);
+		border-radius: 8px;
+		text-align: center;
+		padding: 1em;
+		z-index: 3;
+	}
+
+	.header-menu-user_info-item {
+		font-size: 12px;
+		margin-bottom: .5em;
+		cursor: pointer;
+	}
+
+	.dark {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, 0.5);
+		z-index: 3;
 	}
 `;
 

@@ -47,7 +47,7 @@ function Impresions() {
 						) }
 					</div>
 			}
-			<Button />
+			<Button text={ "Показать еще" } />
 		</Wrapper>
 	);
 }
