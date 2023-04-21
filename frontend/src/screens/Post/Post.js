@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { useDispatch, useSelector } from "react-redux";
-import { listEventDetails } from "../../actions/eventActions";
-import Promotion from "../../components/Promotion";
-import Preview from "./components/Preview";
-import Info from "./components/Info";
-import Loader from "../../components/Loader";
-import Message from "../../components/Message";
+import { useDispatch, useSelector } from 'react-redux';
+import { listEventDetails } from '../../actions/eventActions';
+import Promotion from '../../components/Promotion';
+import Preview from './components/Preview';
+import Info from './components/Info';
+import Loader from '../../components/Loader';
+import Message from '../../components/Message';
 
-function EventScreen() {
+function Event() {
 	const { _id } = useParams();
 
 	const dispatch = useDispatch();
@@ -32,4 +32,4 @@ function EventScreen() {
 	);
 }
 
-export default EventScreen;
+export default Event;
