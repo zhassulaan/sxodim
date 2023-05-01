@@ -11,6 +11,8 @@ import Home from './screens/Home/Home';
 import Post from './screens/Post/Post';
 import Profile from './screens/Profile/Profile';
 import Editer from './screens/Editer/Editer';
+import ReturnConditions from './screens/ReturnConditions';
+import TermOfUse from './screens/TermOfUse';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} exact />
         <Route path='/post/:_id' element={<Post />} />
+        <Route path='/term-of-use' element={<TermOfUse />} exact />
+        <Route path='/return-conditions' element={<ReturnConditions />} exact />
         <Route path='/profile' element={<Profile />} exact />
         <Route path='/edit' element={<Editer />} exact />
       </Routes>

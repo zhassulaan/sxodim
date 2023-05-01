@@ -69,6 +69,18 @@ img {
   padding: 0;
 }
 
+.title {
+  text-align: center;
+}
+
+.content {
+  margin-top: 40px;
+}
+
+.info_page {
+  padding: 60px 0 140px;
+}
+
 .chip {
   display: flex;
   align-items: center;

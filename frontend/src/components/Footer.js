@@ -49,8 +49,8 @@ function Footer() {
           </div>
         </div> 
 				<div className='footer-agreements'>
-          <a href='https://sxodim.com/booking_rules' className='link'>Правила использования и возврата</a>
-          <a href='https://sxodim.com/polzovatelskoe-soglashenie' className='link'>Пользовательское соглашение</a>
+          <a href='/return-conditions' className='link'>Правила использования и возврата</a>
+          <a href='/term-of-use' className='link'>Пользовательское соглашение</a>
         </div> 
 			</div>
 

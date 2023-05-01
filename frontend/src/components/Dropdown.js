@@ -54,8 +54,7 @@ function Dropdown({ action }) {
 				</a>
 			</li>
 			<li className='profile_menu-links'>
-				<a className='profile_menu-link' href='/term-of-use'>Полбзовательское соглашение</a>
-				<a className='profile_menu-link' href='/delivery-payment'>Доставка и оплата</a>
+				<a className='profile_menu-link' href='/term-of-use'>Ползовательское соглашение</a>
 				<a className='profile_menu-link' href='/return-conditions'>Условия возврата</a>
 				<a className='profile_menu-link' href='/my-refunds'>Возвраты</a>
 				<a className='profile_menu-link' href='/communications'>Отзывы и вопросы</a>
