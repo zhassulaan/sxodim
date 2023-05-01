@@ -1,18 +1,18 @@
 import React from "react";
 import styled from 'styled-components';
 
-function Info({ event }) {
+function Info({ post }) {
 	return (
 		<Wrapper>
 			<div className="post_top-image">
-				<img src={ event.image } alt="main" />
+				<img src={ post.image } alt="main" />
 			</div>
 			<div className="post_top-info">
 				<div className="post_top-info-category_wrapper">
-					<a href="https://sxodim.com/almaty/events/vystavki" className="post_top-info-category">{ event.category }</a>
-					<p className="post_top-info-views">{ event.views }</p>
+					<a href="https://sxodim.com/almaty/events/vystavki" className="post_top-info-category">{ post.category }</a>
+					<p className="post_top-info-views">{ post.views }</p>
 				</div>
-				<h1 className="post_top-info-title">{ event.title }</h1>
+				<h1 className="post_top-info-title">{ post.title }</h1>
 			</div>
 		</Wrapper>
 	);

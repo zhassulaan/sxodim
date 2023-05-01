@@ -7,7 +7,7 @@ import PageContent from './components/PageContent.js';
 
 function Home() {
 	return (
-		<Wrapper className="container">
+		<Wrapper className='container'>
 			<Promotion />
 			<SpecialDates />
 			<Impression />

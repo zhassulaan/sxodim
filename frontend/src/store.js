@@ -1,14 +1,18 @@
-import { createStore, combineReducers, applyMiddleware } from "redux";
-import thunk from "redux-thunk";
-import { composeWithDevTools } from "redux-devtools-extension";
-import { eventListReducer, eventDetailsReducer } from "./reducers/eventReducers";
-import { userLoginReducer, userRegisterReducer } from "./reducers/userReducers";
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import { postListReducer, postDetailsReducer, postAddReducer, postDeleteReducer } from './reducers/postReducers';
+import { userLoginReducer, userRegisterReducer, userDetailsReducer, userUpdateProfileReducer } from './reducers/userReducers';
 
 const reducer = combineReducers({
-	eventList: eventListReducer,
-	eventDetails: eventDetailsReducer,
+	postList: postListReducer,
+	postDetails: postDetailsReducer,
+	// postAdd: postAddReducer,
+	// postDelete: postDeleteReducer,
 	userLogin: userLoginReducer,
 	userRegister: userRegisterReducer,
+	userDetails: userDetailsReducer,
+	// userUpdateProfile: userUpdateProfileReducer,
 });
 
 const userInfoFromStorage = localStorage.getItem('userInfo') ?

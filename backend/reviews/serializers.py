@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from rest_framework_simplejwt.tokens import RefreshToken
-from .models import Event
+from .models import Post
 
 class UserSerializer(serializers.ModelSerializer):
   name = serializers.SerializerMethodField(read_only=True)
@@ -36,7 +36,7 @@ class UserSerializerWithToken(UserSerializer):
     token = RefreshToken.for_user(obj)
     return str(token.access_token)
 
-class EventSerializer(serializers.ModelSerializer):
+class PostSerializer(serializers.ModelSerializer):
   class Meta:
-    model = Event
+    model = Post
     fields = '__all__'

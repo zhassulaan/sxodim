@@ -23,13 +23,13 @@ class MyTokenObtainPairView(TokenObtainPairView):
 @api_view(['GET'])
 def getRoutes(request):
 	routes = [
-		'api/event/',
-		'api/event/create/',
-		'api/event/upload/',
-		'api/event/<id>/',
-		'api/event/<id>/reviews/',
-		'api/event/delete/<id>/',
-		'api/event/update/<id>/',
+		'api/post/',
+		'api/post/create/',
+		'api/post/upload/',
+		'api/post/<id>/',
+		'api/post/<id>/reviews/',
+		'api/post/delete/<id>/',
+		'api/post/update/<id>/',
 	]
 	return Response(routes)
 
@@ -45,11 +45,28 @@ def registerUser(request):
 			email = data['email'],
 			password = make_password(data['password']),
 		)
-		serializer = UserSerializerWithToken(user, many=False)
+		serializer = UserSerializer(user, many=False)
 		return Response(serializer.data)
 	except:
 		message = { 'detail': 'User with this email already exists' }
 		return Response(message, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['PUT'])
+@permission_classes([IsAuthenticated])
+def updateUserProfile(request):
+	user = request.user
+	serializer = UserSerializerWithToken(user, many=False)
+
+	data = request.data
+
+	user.first_name = data['name'],
+	user.username = data['username'],
+	user.email = data['email'],
+	if data['password'] != '':
+		user.password = make_password(data['password']),
+	
+	user.save()
+	return Response(serializer.data)
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])

@@ -1,64 +1,64 @@
-import React from "react";
-import styled from "styled-components";
-import logo from "../resources/logo.png";
-import vk from "../resources/vk.png";
-import instagram from "../resources/instagram.png";
-import telegram from "../resources/telegram.png";
-import facebook from "../resources/facebook.png";
-import message from "../resources/message.png";
+import React from 'react';
+import styled from 'styled-components';
+import logo from '../resources/logo.png';
+import vk from '../resources/vk.png';
+import instagram from '../resources/instagram.png';
+import telegram from '../resources/telegram.png';
+import facebook from '../resources/facebook.png';
+import message from '../resources/message.png';
 
 function Footer() {
 	return (
 		<Wrapper>
-			<div className="footer-content">
-				<div className="footer-logo">
-					<img src={ logo } alt="Давай Сходим!" />
+			<div className='footer-content'>
+				<div className='footer-logo'>
+					<img src={ logo } alt='Давай Сходим!' />
 				</div>
-				<div className="footer-social_networks">
-					<a href="https://vk.com/sxodim" className="footer-social_network-item">
-						<img src={ vk } alt="vk icon" />
+				<div className='footer-social_networks'>
+					<a href='https://vk.com/sxodim' className='footer-social_network-item'>
+						<img src={ vk } alt='vk icon' />
 					</a>
-					<a href="https://www.instagram.com/sxodim/" className="footer-social_network-item">
-						<img src={ instagram } alt="instagram icon" />
+					<a href='https://www.instagram.com/sxodim/' className='footer-social_network-item'>
+						<img src={ instagram } alt='instagram icon' />
 					</a>
-					<a href="https://telegram.me/sxodim" className="footer-social_network-item">
-						<img src={ telegram } alt="telegram icon" />
+					<a href='https://telegram.me/sxodim' className='footer-social_network-item'>
+						<img src={ telegram } alt='telegram icon' />
 					</a>
-					<a href="https://www.facebook.com/sxodim" className="footer-social_network-item">
-						<img src={ facebook } alt="usfacebook icon" />
+					<a href='https://www.facebook.com/sxodim' className='footer-social_network-item'>
+						<img src={ facebook } alt='usfacebook icon' />
 					</a>
 				</div>
-				<div className="footer-email_subscribe">
-					<h4 className="footer-email_subscribe-title title">Рассылка</h4>
-					<p className="footer-email_subscribe-text">Отбираем главные события недели, а&nbsp;потом интересно рассказываем о них в нашей рассылке.</p>
-					<form className="footer-email_subscribe-form" id="subscribe_form">
-						<div className="footer-email_subscribe-form-input">
-            	<label htmlFor="email-input" className="footer-email_subscribe-form-input-icon">
-								<img src={ message } alt="message icon" />
+				<div className='footer-email_subscribe'>
+					<h4 className='footer-email_subscribe-title title'>Рассылка</h4>
+					<p className='footer-email_subscribe-text'>Отбираем главные события недели, а&nbsp;потом интересно рассказываем о них в нашей рассылке.</p>
+					<form className='footer-email_subscribe-form' id='subscribe_form'>
+						<div className='footer-email_subscribe-form-input'>
+            	<label htmlFor='email-input' className='footer-email_subscribe-form-input-icon'>
+								<img src={ message } alt='message icon' />
 							</label>
-							<input type="text" id="email-input" name="email" placeholder="Электронная почта" className="footer-email_subscribe-form-input-text" />
+							<input type='text' id='email-input' name='email' placeholder='Электронная почта' className='footer-email_subscribe-form-input-text' />
 						</div>
-            <button className="footer-email_subscribe-form-button" type="submit">Подписаться</button>
+            <button className='footer-email_subscribe-form-button' type='submit'>Подписаться</button>
           </form>
 				</div>
-        <div className="footer-about_project">
-          <h4 className="footer-about_project-title title">О «Давай Сходим»</h4>
-          <div className="footer-about_project-links">
-            <a href="https://sxodim.com/almaty/about" className="link">О Проекте</a>
-            <a href="https://sxodim.com/almaty/contacts" className="link">Контакты</a>
+        <div className='footer-about_project'>
+          <h4 className='footer-about_project-title title'>О «Давай Сходим»</h4>
+          <div className='footer-about_project-links'>
+            <a href='https://sxodim.com/almaty/about' className='link'>О Проекте</a>
+            <a href='https://sxodim.com/almaty/contacts' className='link'>Контакты</a>
           </div>
         </div> 
-				<div className="footer-agreements">
-          <a href="https://sxodim.com/booking_rules" className="link">Правила использования и возврата</a>
-          <a href="https://sxodim.com/polzovatelskoe-soglashenie" className="link">Пользовательское соглашение</a>
+				<div className='footer-agreements'>
+          <a href='https://sxodim.com/booking_rules' className='link'>Правила использования и возврата</a>
+          <a href='https://sxodim.com/polzovatelskoe-soglashenie' className='link'>Пользовательское соглашение</a>
         </div> 
 			</div>
 
-			<div className="header-bottom">
-				<p className="header-privacy_text">
+			<div className='header-bottom'>
+				<p className='header-privacy_text'>
 					 &copy; Давай Сходим, 2023
-					<span id="copyright">
-							<script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+					<span id='copyright'>
+							<script>{ new Date().getFullYear() }</script>
 					</span>
 				</p>
 			</div>
@@ -82,10 +82,10 @@ const Wrapper = styled.footer`
 		display: grid;
 		column-gap: 2em;
 		grid-template-areas:
-			"logo about-project email-subscribe"
-			"social-networks about-project email-subscribe"
-			"agreements agreements email-subscribe"
-			"bottom bottom bottom";
+			'logo about-project email-subscribe'
+			'social-networks about-project email-subscribe'
+			'agreements agreements email-subscribe'
+			'bottom bottom bottom';
 		width: 100%;
 		max-width: 1120px;
 		margin: 0 auto;

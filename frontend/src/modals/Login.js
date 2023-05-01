@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-import { useDispatch, useSelector } from "react-redux";
-import styled from "styled-components";
-import { login } from "../actions/userActions";
-import Button from "../components/Button";
-import Message from "../components/Message";
+import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
+import { login } from '../actions/userActions';
+import Input from '../components/Input';
+import Button from '../components/Button';
+import Message from '../components/Message';
 
-function Login({ event }) {
+function Login({ action }) {
 	const [email, setEmail] = useState('');
 	const [password, setPassword] = useState('');
 
@@ -26,50 +27,48 @@ function Login({ event }) {
 		}
 	}, [history, userInfo, redirect]);
 
-	const submitHandler = () => {
+	const loginHandler = () => {
 		dispatch(login(email, password));
 	}
 
 	return (
 		<Wrapper>
-			<div className="form-container">
-				<div className="form-header">
-					<h2 className="form-title">ВХОД</h2>
+			<div className='form-container'>
+				<div className='form-header'>
+					<h2 className='form-title'>ВХОД</h2>
 
-					<span className="form-paragraph" onClick={ () => event('register') }>
+					<span className='form-paragraph' onClick={ () => action('register') }>
 						<p>Регистрация</p>
 					</span>
 				</div>
 
-				{ error && <Message variant="danger">{ error }</Message> }
+				{ error && <Message variant='danger'>{ error }</Message> }
 
-				<div onSubmit={ submitHandler }>
-					<div className="form-group">
-						<label htmlFor="email" className="form-group-label">Email</label>
-						<input
-							type="text"
-							name="email"
-							placeholder="Эл. почта"
+				<div>
+					<div className='form-group'>
+						<label htmlFor='email' className='form-group-label'>Email</label>
+						<Input
+							type={ 'text' }
+							name={ 'email' }
+							placeholder={ 'Эл. почта' }
 							value={ email }
-							className="form-group-input"
-							id="email"
-							onChange={ (e) => setEmail(e.target.value) }
+							classname={ 'form-group-input' }
+							action={ (e) => setEmail(e.target.value) }
 						/>
 					</div>
-					<div className="form-group">
-						<label htmlFor="password" className="form-group-label">Пароль</label>
-						<input
-							type="password"
-							name="password"
-							placeholder="Пароль"
+					<div className='form-group'>
+						<label htmlFor='password' className='form-group-label'>Пароль</label>
+						<Input
+							type={ 'password' }
+							name={ 'password' }
+							placeholder={ 'Пароль' }
 							value={ password }
-							className="form-group-input"
-							id="password"
-							onChange={ (e) => setPassword(e.target.value) }
+							classname={ 'form-group-input' }
+							action={ (e) => setPassword(e.target.value) }
 						/>
 					</div>
-					<Button text={ "Войти" } event={ submitHandler } />
-					<p className="form-reset">Забыли пароль?</p>
+					<Button text={ 'Войти' } event={ loginHandler } />
+					<p className='form-reset'>Забыли пароль?</p>
 				</div>
 			</div>
 		</Wrapper>
@@ -77,7 +76,7 @@ function Login({ event }) {
 }
 
 const Wrapper = styled.div`
-	position: fixed;
+	position: absolute;
 	left: 30%;
 	width: 40%;
 	z-index: 4;

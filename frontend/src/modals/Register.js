@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { createBrowserHistory } from 'history';
-import { useDispatch, useSelector } from "react-redux";
-import styled from "styled-components";
-import { register } from "../actions/userActions";
-import Button from "../components/Button";
-import Message from "../components/Message";
+import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
+import { register } from '../actions/userActions';
+import Input from '../components/Input';
+import Button from '../components/Button';
+import Message from '../components/Message';
 
-function Register({ event }) {
+function Register({ action }) {
 	const [name, setName] = useState('');
 	const [surename, setSurename] = useState('');
 	const [email, setEmail] = useState('');
@@ -58,113 +59,99 @@ function Register({ event }) {
     return /[0-9]/.test(str);
   }
 
-	const submitHandler = () => {
-		console.log(name);
-		console.log(surename);
-		console.log(email);
-		console.log(password);
-		console.log(confirmPassword);
+	const signupHandler = () => {
 		if (name === '' || surename === '' || email === '' || password === '' || confirmPassword === '') {
-			setMessage("Заполните каждое поле доконца.");
+			setMessage('Заполните каждое поле доконца.');
 		} else if (!email.includes('@')) {
-			setMessage("Укажите правильный электронный адрес.");
+			setMessage('Укажите правильный электронный адрес.');
 		} else if (password.length < 8) {
-			setMessage("Пароль должен иметь не менее 8 символов.");
+			setMessage('Пароль должен иметь не менее 8 символов.');
 		} else if (!checkUppercase(password)) {
-			setMessage("Пароль должен содержать хотя бы одну прописную букву.");
+			setMessage('Пароль должен содержать хотя бы одну прописную букву.');
 		} else if (!checkLowercase(password)) {
-			setMessage("Пароль должен содержать хотя бы одну строчную букву.");
+			setMessage('Пароль должен содержать хотя бы одну строчную букву.');
 		} else if (!checkNumber(password)) {
-			setMessage("Пароль должен содержать хотя бы одну цифру.");
+			setMessage('Пароль должен содержать хотя бы одну цифру.');
 		} else if (password !== confirmPassword) {
-			setMessage("Пароли не совпадают.");
+			setMessage('Пароли не совпадают.');
 		} else if (error) {
-			setMessage("Пользователь с таким адресом электронной почты уже существует.");
+			setMessage('Пользователь с таким адресом электронной почты уже существует.');
 		} else {
+			setMessage('');
 			dispatch(register(name, surename, email, password));
 		}
 	}
 
 	return (
 		<Wrapper>
-			<div className="form-container">
-				<div className="form-header">
-					<h2 className="form-title">РЕГЕСТРАЦИЯ</h2>
+			<div className='form-container'>
+				<div className='form-header'>
+					<h2 className='form-title'>РЕГЕСТРАЦИЯ</h2>
 
-					<span className="form-paragraph" onClick={ () => event('login') }>
+					<span className='form-paragraph' onClick={ () => action('login') }>
 						<p>Вход</p>
 					</span>
 				</div>
 
-				{ error && <Message variant="danger">{ message }</Message> }
+				{ (message || error) && <Message variant='danger'>{ message }</Message> }
 
 				<div>
-					<div className="form-group">
-						<label htmlFor="name" className="form-group-label">Имя</label>
-						<input
-							required
-							type="text"
-							name="name"
-							placeholder="Ваше име"
+					<div className='form-group'>
+						<label htmlFor='name' className='form-group-label'>Имя</label>
+						<Input
+							type={ 'text' }
+							name={ 'name' }
+							classname={ 'form-group-input' }
 							value={ name }
-							className="form-group-input"
-							id="name"
-							onChange={ (e) => setName(e.target.value) }
+							placeholder={ 'Ваше име' }
+							action={ (e) => setName(e.target.value) }
 						/>
 					</div>
-					<div className="form-group">
-						<label htmlFor="surename" className="form-group-label">Фамилия</label>
-						<input
-							required
-							type="text"
-							name="surename"
-							placeholder="Ваше фамилие"
+					<div className='form-group'>
+						<label htmlFor='surename' className='form-group-label'>Фамилия</label>
+						<Input
+							type={ 'text' }
+							name={ 'surename' }
+							classname={ 'form-group-input' }
 							value={ surename }
-							className="form-group-input"
-							id="surename"
-							onChange={ (e) => setSurename(e.target.value) }
+							placeholder={ 'Ваше фамилие' }
+							action={ (e) => setSurename(e.target.value) }
 						/>
 					</div>
-					<div className="form-group">
-						<label htmlFor="name" className="form-group-label">Email</label>
-						<input
-							required
-							type="text"
-							name="email"
-							placeholder="Эл. почта"
+					<div className='form-group'>
+						<label htmlFor='name' className='form-group-label'>Email</label>
+						<Input
+							type={ 'text' }
+							name={ 'email' }
+							classname={ 'form-group-input' }
 							value={ email }
-							className="form-group-input"
-							id="email"
-							onChange={ (e) => setEmail(e.target.value) }
+							placeholder={ 'Эл. почта' }
+							action={ (e) => setEmail(e.target.value) }
 						/>
 					</div>
-					<div className="form-group">
-						<label htmlFor="password" className="form-group-label">Пароль</label>
-						<input
-							required
-							type="text"
-							name="password"
-							placeholder="Пароль"
+					<div className='form-group'>
+						<label htmlFor='password' className='form-group-label'>Пароль</label>
+						<Input
+							type={ 'text' }
+							name={ 'password' }
+							classname={ 'form-group-input' }
 							value={ password }
-							className="form-group-input"
-							id="password"
-							onChange={ (e) => setPassword(e.target.value) }
+							placeholder={ 'Пароль' }
+							action={ (e) => setPassword(e.target.value) }
 						/>
 					</div>
-					<div className="form-group">
-						<label htmlFor="confirm_password" className="form-group-label">Подтвердите пароль</label>
-						<input
-							required
-							type="text"
-							name="confirm_password"
-							placeholder="Пароль"
+					<div className='form-group'>
+						<label htmlFor='confirm_password' className='form-group-label'>Подтвердите пароль</label>
+						<Input
+							type={ 'text' }
+							name={ 'confirm_password' }
+							classname={ 'form-group-input' }
 							value={ confirmPassword }
-							className="form-group-input"
-							id="confirm_password"
-							onChange={ (e) => setConfirmPassword(e.target.value) }
+							placeholder={ 'Пароль' }
+							action={ (e) => setConfirmPassword(e.target.value) }
 						/>
 					</div>
-					<Button text={ "Зарегестрироваться" } event={ submitHandler } />
+					<Button text={ 'Зарегестрироваться' } event={ signupHandler } />
 				</div>
 			</div>
 		</Wrapper>
@@ -172,7 +159,7 @@ function Register({ event }) {
 }
 
 const Wrapper = styled.div`
-	position: fixed;
+	position: absolute;
 	left: 30%;
 	width: 40%;
 	z-index: 4;

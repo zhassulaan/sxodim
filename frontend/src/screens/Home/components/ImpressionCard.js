@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import tickets from "../../../resources/tickets_white.png";
 import afisha from "../../../resources/afisha_white.png";
 
-function ImpressionCard({ event }) {
+function ImpressionCard({ post }) {
 	return (
 		<Wrapper className="impression-card">
 			<div className="impression-card-image">
-				<a href={ `/event/${event.id}` }>
-					<img src={ event.image } alt="Фестиваль Sxodim Fest" className="impression-card-background_image"/>
+				<a href={ `/post/${post.id}` }>
+					<img src={ post.main_image } alt="Фестиваль Sxodim Fest" className="impression-card-background_image"/>
 				</a>
 				<div className="impression-card-badges">
 					<div className="impression-card-badge badge">
@@ -16,14 +16,14 @@ function ImpressionCard({ event }) {
 							<img src={ afisha } alt="afisha icon" />
 						</div>
 					</div>
-					<a href={ `/${event.category_en}/${event.id}/tickets` } className="impression-card-badge badge">
+					<a href={ `/${post.category_en}/${post.id}/tickets` } className="impression-card-badge badge">
 						<div className="impression-icon">
 							<img src={ tickets } alt="tickets icon" />
 						</div>
 						<span>Билеты</span>
 					</a>
-					<a href={ `/events/${event.category_en}` } className="impression-card-badge badge">
-						{ event.category }
+					<a href={ `/posts/${post.category_en}` } className="impression-card-badge badge">
+						{ post.category }
 					</a>
 				</div>
 				{/* <div className="impression-card-favorite">
@@ -32,11 +32,11 @@ function ImpressionCard({ event }) {
 					</div>
 				</div> */}
 			</div>
-			<a href={ `/event/${event._id}` } className="impression-card-title">
-				{ event.title }
+			<a href={ `/post/${post._id}` } className="impression-card-title">
+				{ post.title }
 			</a>
 			<p className="impression-card-info">
-				{ event.price }  ₸, { event.address }
+				{ post.price }{ post.price ? ' ₸, ' : '' }{ post.address }
 			</p>
 		</Wrapper>
 	);

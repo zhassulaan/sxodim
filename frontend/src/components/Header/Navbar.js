@@ -1,56 +1,56 @@
-import React from "react";
-import styled from "styled-components";
-import search from "../../resources/search.png";
-import close from "../../resources/close.png";
-import cert from "../../resources/cert.png";
-import tickets from "../../resources/tickets_black.png";
-import journal from "../../resources/journal.png";
-import afisha from "../../resources/afisha_black.png";
-import places from "../../resources/places.png";
+import React from 'react';
+import styled from 'styled-components';
+import search from '../../resources/search.png';
+import close from '../../resources/close.png';
+import cert from '../../resources/cert.png';
+import tickets from '../../resources/tickets_black.png';
+import journal from '../../resources/journal.png';
+import afisha from '../../resources/afisha_black.png';
+import places from '../../resources/places.png';
 
 function Navbar() {
 	return (
 		<Wrapper>
-			<div className="nav-searchbar">
-				<div className="nav-icon searchbar-button">
-					<img src={ search } alt="search button" className="button" />
+			<div className='nav-searchbar'>
+				<div className='nav-icon searchbar-button'>
+					<img src={ search } alt='search button' className='button' />
 				</div>
-				<input type="search" placeholder="Поиск" data-type="search" id="search-input" data-filter="" />
-				{/* <div className="nav-icon searchbar-button">
-					<img src={ close } alt="close button" className="button" />
+				<input type='search' placeholder='Поиск' data-type='search' id='search-input' data-filter='' />
+				{/* <div className='nav-icon searchbar-button'>
+					<img src={ close } alt='close button' className='button' />
 				</div> */}
 			</div>
 
-			<ul className="nav-menu">
-				<li className="nav-menu-item">
-					<div className="nav-menu-icon nav-icon">
-						<img src={ cert } alt="cert icon" className="horizontal_icon" />
+			<ul className='nav-menu'>
+				<li className='nav-menu-item'>
+					<div className='nav-menu-icon nav-icon'>
+						<img src={ cert } alt='cert icon' className='horizontal_icon' />
 					</div>
-					<span className="nav-menu-text">Сертификаты</span>
+					<span className='nav-menu-text'>Сертификаты</span>
 				</li>
-				<li className="nav-menu-item">
-					<div className="nav-menu-icon nav-icon">
-						<img src={ tickets } alt="tickets icon" className="horizontal_icon" />
+				<li className='nav-menu-item'>
+					<div className='nav-menu-icon nav-icon'>
+						<img src={ tickets } alt='tickets icon' className='horizontal_icon' />
 					</div>
-					<span className="nav-menu-text">Билеты</span>
+					<span className='nav-menu-text'>Билеты</span>
 				</li>
-				<li className="nav-menu-item">
-					<div className="nav-menu-icon nav-icon">
-						<img src={ journal } alt="journal icon" className="horizontal_icon" />
+				<li className='nav-menu-item'>
+					<div className='nav-menu-icon nav-icon'>
+						<img src={ journal } alt='journal icon' className='horizontal_icon' />
 					</div>
-					<span className="nav-menu-text">Журнал</span>
+					<span className='nav-menu-text'>Журнал</span>
 				</li>
-				<li className="nav-menu-item">
-					<div className="nav-menu-icon nav-icon">
-						<img src={ afisha } alt="afisha icon" className="vertical_icon" />
+				<li className='nav-menu-item'>
+					<div className='nav-menu-icon nav-icon'>
+						<img src={ afisha } alt='afisha icon' className='vertical_icon' />
 					</div>
-					<span className="nav-menu-text">Афиша</span>
+					<span className='nav-menu-text'>Афиша</span>
 				</li>
-				<li className="nav-menu-item">
-					<div className="nav-menu-icon nav-icon">
-						<img src={ places } alt="places icon" className="vertical_icon" />
+				<li className='nav-menu-item'>
+					<div className='nav-menu-icon nav-icon'>
+						<img src={ places } alt='places icon' className='vertical_icon' />
 					</div>
-					<span className="nav-menu-text">Места</span>
+					<span className='nav-menu-text'>Места</span>
 				</li>
 			</ul>
 		</Wrapper>

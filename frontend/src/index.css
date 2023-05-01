@@ -11,6 +11,7 @@ Variables
   --clr-grey1: #f2f2f2;
   --clr-grey2: #e5e5e5;
   --clr-grey3: #a6a6a6;
+  --clr-grey4: #868695;
   --clr-orange-1: #ec6652;
   --clr-orange-2: #bb483d;
   --clr-orange-3: rgb(236, 102, 82);
@@ -50,6 +51,12 @@ a {
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
   padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
 }
 
 .button {

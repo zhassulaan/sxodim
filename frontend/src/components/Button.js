@@ -1,10 +1,10 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 function Button({ text, event }) {
 	return (
 		<Wrapper>
-			<button id="button" onClick={ event }>
+			<button id='button' onClick={ event }>
 				{ text }
 			</button>
 		</Wrapper>

@@ -1,36 +1,36 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { listEvents } from "../../../actions/eventActions";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { listPosts } from '../../../actions/postActions';
 import styled from 'styled-components';
-import ImpressionCard from "./ImpressionCard";
-import Loader from "../../../components/Loader";
-import Message from "../../../components/Message";
-import Button from "../../../components/Button";
+import ImpressionCard from './ImpressionCard';
+import Loader from '../../../components/Loader';
+import Message from '../../../components/Message';
+import Button from '../../../components/Button';
 
 function Impresions() {
 	const dispatch = useDispatch();
 	
-	const eventList = useSelector(state => state.eventList);
-	const { error, loading, events } = eventList;
+	const postList = useSelector(state => state.postList);
+	const { error, loading, posts } = postList;
 
   useEffect(() => {
-		dispatch(listEvents());
+		dispatch(listPosts());
   }, [dispatch]);
 
 	window.onload = function () {
 		var card = document.getElementsByClassName('impression-card');
 		var btn = document.getElementById('button');
 		for (let i = 16; i < card.length; i++) {
-			card[i].style.display = "none";
+			card[i].style.display = 'none';
 		}
 
 		var countD = 16;
-		btn.addEventListener("click", function() {
+		btn.addEventListener('click', function() {
 			var card = document.getElementsByClassName('impression-card');
 			countD += 16;
 			if (countD <= card.length) {
 				for (let i = 0; i < countD; i++) {
-					card[i].style.display = "block";
+					card[i].style.display = 'block';
 				}
 			}
 		})
@@ -39,15 +39,15 @@ function Impresions() {
 	return (
 		<Wrapper>
 			{ loading ? <Loader />
-				: error ? <Message variant="danger">{ error }</Message>
+				: error ? <Message variant='danger'>{ error }</Message>
 					:
-					<div className="impression-items">
-						{ events?.map(item => 
-							<ImpressionCard event={ item } />
+					<div className='impression-items'>
+						{ posts?.map(item => 
+							<ImpressionCard post={ item } />
 						) }
 					</div>
 			}
-			<Button text={ "Показать еще" } />
+			<Button text={ 'Показать еще' } />
 		</Wrapper>
 	);
 }
