@@ -1,5 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import axios from 'axios';
 import { listPosts } from '../../../actions/postActions';
 import styled from 'styled-components';
 import ImpressionCard from './ImpressionCard';
@@ -8,6 +9,9 @@ import Message from '../../../components/Message';
 import Button from '../../../components/Button';
 
 function Impresions() {
+	const [query, setQuery] = useState('Стендап');
+	const [results, setResults] = useState([]);
+
 	const dispatch = useDispatch();
 	
 	const postList = useSelector(state => state.postList);
@@ -16,6 +20,12 @@ function Impresions() {
   useEffect(() => {
 		dispatch(listPosts());
   }, [dispatch]);
+
+	const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.get('/api/post/search/', { params: { q: query } })
+      .then(response => setResults(response.data.results));
+  };
 
 	window.onload = function () {
 		var card = document.getElementsByClassName('impression-card');
@@ -35,7 +45,6 @@ function Impresions() {
 			}
 		})
 	}
-
 	return (
 		<Wrapper>
 			{ loading ? <Loader />

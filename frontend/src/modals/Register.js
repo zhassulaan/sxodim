@@ -209,7 +209,7 @@ const Wrapper = styled.div`
     font-size: 14px;
     font-weight: 400;
     padding-left: 1.25rem;
-		border: 1px solid var(--clr-grey3);
+		border: 1px solid var(--clr-grey-3);
   }
 	
 	#button {

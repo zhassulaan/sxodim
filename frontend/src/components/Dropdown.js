@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createBrowserHistory } from 'history';
 import styled from 'styled-components';
 import { logout } from '../actions/userActions';
+import useDebounce from '../useDebounce';
 
 function Dropdown({ action }) {
 	const dispatch = useDispatch();
@@ -14,20 +15,25 @@ function Dropdown({ action }) {
 	const logoutHandler = () => {
 		dispatch(logout());
 		history.push('/');
+		window.location.reload(false);
 	}
+
+	const userList = JSON.parse(localStorage.getItem('user_list'));
+	let user = {};
+	useDebounce(user = userList.find(item => item.email === userInfo.email), 500);
 
 	return (
 		<Wrapper className='profile_menu' onMouseEnter={ () => action(true) } onMouseLeave={ () => action(false)}>
 			<li className='profile_menu-user'>
 				<a href='/profile' className='profile_menu-user-avatar'>
-					<img width='64' height='64' alt='user-avatar' src={ userInfo.image }/>
+					<img width='64' height='64' alt='user-avatar' src={ user ? user.avatar : null } />
 				</a>
 				<a href='/profile' className='profile_menu-user-details'>
 					<p className='profile_menu-user-details-name'>
-						{ userInfo.name }
+						{ user ? user.name : null }
 					</p>
 					<p className='profile_menu-user-details-phone'>
-						{ userInfo.phone }
+						{ user ? user.phone : null }
 					</p>
 					<p className='profile_menu-user-details-profile_link'>
 						Личные данные
@@ -46,7 +52,7 @@ function Dropdown({ action }) {
 				<a className='profile_menu-item' href='/profile#discount'>
 					<span className='profile_menu-icon'></span>
 					<span className='profile_menu-title'>Скидка покупателя</span>
-					<b className='profile-menu__sale'>{ userInfo.discount }</b>
+					<b className='profile-menu__sale'>{ user ? user.discount : null }</b>
 				</a>
 				<a className='profile_menu-item' href='/myorders'>
 					<span className='profile_menu-icon'></span>
@@ -168,7 +174,7 @@ const Wrapper = styled.ul`
 	}
 
 	#logout {
-		color: var(--clr-grey4);    
+		color: var(--clr-grey-4);    
 	}
 `;
 

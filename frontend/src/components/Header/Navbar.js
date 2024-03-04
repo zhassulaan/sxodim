@@ -62,14 +62,14 @@ const Wrapper = styled.nav`
 	align-items: center;
 	width: 100%;
 	height: 3.75em;
-	background: var(--clr-grey1);
+	background: var(--clr-grey-1);
 	padding: .5em 1em;
 
 	.nav-searchbar {
 		height: 2.625em;
 		display: flex;
     align-items: center;
-    border: 1px solid var(--clr-grey2);
+    border: 1px solid var(--clr-grey-2);
     border-radius: .25em;
 		background: var(--clr-white);
 		padding:  0 .75em;

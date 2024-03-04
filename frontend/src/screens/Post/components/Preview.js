@@ -5,7 +5,7 @@ function Info({ post }) {
 	return (
 		<Wrapper>
 			<div className="post_top-image">
-				<img src={ post.image } alt="main" />
+				<img src={ post.main_image } alt="main" />
 			</div>
 			<div className="post_top-info">
 				<div className="post_top-info-category_wrapper">

@@ -7,6 +7,7 @@ import { login } from '../actions/userActions';
 import Input from '../components/Input';
 import Button from '../components/Button';
 import Message from '../components/Message';
+import userList from '../userList';
 
 function Login({ action }) {
 	const [email, setEmail] = useState('');
@@ -29,6 +30,7 @@ function Login({ action }) {
 
 	const loginHandler = () => {
 		dispatch(login(email, password));
+		localStorage.setItem('user_list', JSON.stringify(userList));
 	}
 
 	return (
@@ -126,7 +128,7 @@ const Wrapper = styled.div`
     font-size: 14px;
     font-weight: 400;
     padding-left: 1.25rem;
-		border: 1px solid var(--clr-grey3);
+		border: 1px solid var(--clr-grey-3);
   }
 	
 	#button {

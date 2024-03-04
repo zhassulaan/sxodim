@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from 'styled-components';
+import useDebounce from '../../../useDebounce';
 import location from "../../../resources/location.png";
 import arrow from "../../../resources/arrow.png";
 import search from "../../../resources/search.png";
 import close from "../../../resources/close.png";
 
+// const url = 'http://127.0.0.1:8000/api/'
+
 function Filter() {
+	// const [data, setData] = useState([]);
+	const [searchQuery, setSearchQuery] = useState('');
+
+	// const debounce = useDebounce(searchQuery, 500);
+
+	// useEffect(() => {
+	// 	fetchData();
+	// }, [debounce]);
+
+	// const fetchData = async() => {
+	// 	const endpoint = `${url}/post/?title=${ searchQuery }`
+		
+	// 	try {
+	// 		const response = await fetch(endpoint, {
+	// 			method: 'GET',
+	// 	});
+	// 		const data = await response.json();
+	// 		console.log(data);
+	// 		setData(data);
+	// 	} catch (e) {
+	// 		console.log(e);
+	// 	}
+	// }
+			
 	return (
 		<Wrapper>
 			<div className="impression-header">
@@ -27,7 +54,7 @@ function Filter() {
 					<div className="impression-icon searchbar-icon">
 						<img src={ search } alt="search button" className="button" />
 					</div>
-					<input type="search" placeholder="Поиск впечатлений" data-type="search" id="search-impression-input" data-filter="" />
+					<input type="text" name="search" placeholder="Поиск впечатлений" value={ searchQuery } id="search-impression-input" onChange={ (e) => setSearchQuery(e.target.value) } />
 					{/* <div className="impression-icon searchbar-button">
 						<img src={ close } alt="close button" className="button" />
 					</div> */}
@@ -492,7 +519,7 @@ const Wrapper = styled.div`
 		display: flex;
     align-items: center;
 		height: 100%;
-    border: 1px solid var(--clr-grey2);
+    border: 1px solid var(--clr-grey-2);
     border-radius: 4px;
 		background: var(--clr-white);
 		padding: 0 12px;
@@ -561,7 +588,7 @@ const Wrapper = styled.div`
 		font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
-    color: var(--clr-grey3);
+    color: var(--clr-grey-3);
     margin-bottom: 2px;
 	}
 

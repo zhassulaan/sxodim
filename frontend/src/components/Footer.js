@@ -67,7 +67,7 @@ function Footer() {
 }
 
 const Wrapper = styled.footer`
-	background: var(--clr-grey1);
+	background: var(--clr-grey-1);
 	color: rgba(0, 0, 0, 0.48);
 	
 	.title {
@@ -145,7 +145,7 @@ const Wrapper = styled.footer`
 		display: flex;
 		align-items: center;
 		background: var(--clr-white);
-    border: 1px solid var(--clr-grey2);
+    border: 1px solid var(--clr-grey-2);
     border-radius: 4px;
     padding: 0 12px;
 	}
@@ -235,7 +235,7 @@ const Wrapper = styled.footer`
 		grid-area: bottom;
 		width: 100%;
 		height: 3em;
-		background: var(--clr-grey2);
+		background: var(--clr-grey-2);
     padding: 1em;
 	}
 

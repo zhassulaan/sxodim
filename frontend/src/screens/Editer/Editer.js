@@ -300,7 +300,7 @@ const Wrapper = styled.div`
 	}
 
 	thead {
-		background: var(--clr-grey1);
+		background: var(--clr-grey-1);
 	}
 
 	th, td {

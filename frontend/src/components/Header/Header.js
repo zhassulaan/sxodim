@@ -100,7 +100,7 @@ const Wrapper = styled.header`
 	.header-menu-item {
 		font-size: 14px;
 		color: rgba(0, 0, 0, 0.865);
-		background: var(--clr-grey1);
+		background: var(--clr-grey-1);
 		padding: 8px 4px;
 	}
 
